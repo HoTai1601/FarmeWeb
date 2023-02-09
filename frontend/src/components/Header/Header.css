@@ -1,13 +1,13 @@
 .navbar
 {
-    background-color: #008f11 !important;
+    background-color: #03540c !important;
     width: auto;
     color: white !important;
 }
 .nav-cal{
     width: auto;
     color: white !important;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #username, #adminmenu {
