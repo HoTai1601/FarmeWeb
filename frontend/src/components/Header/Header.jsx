@@ -2,6 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, NavDropdown, Image } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+
 import "./Header.css";
 
 import { logout } from "./../../actions/userActions";
@@ -38,6 +41,14 @@ const Header = () => {
           <LinkContainer to="login?redirect=supplier">
             <Nav.Link className="nav-cal">Nhà Cung Cấp</Nav.Link>
           </LinkContainer>
+          <InputGroup className="nav-search">
+            <Form.Control
+              placeholder="Recipient's username"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+          </InputGroup>
+
           <LinkContainer to="/cart">
             <Nav.Link
               className={`${
