@@ -4,6 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, NavDropdown, Image } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
 
 import "./Header.css";
 
@@ -47,6 +48,9 @@ const Header = () => {
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
             />
+            <Button className="nav-btn" variant="outline-secondary">
+              <i className="fas fa-search"></i>
+            </Button>
           </InputGroup>
 
           <LinkContainer to="/cart">

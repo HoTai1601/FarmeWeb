@@ -10,11 +10,11 @@
     font-size: 15px;
 }
 .nav-search{
-    width: 350px;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    width: 400px;
 }
-
+.nav-btn:focus{
+    box-shadow: none;
+}
 #username, #adminmenu {
     color: white !important;
     font-size: 14px;
@@ -46,13 +46,15 @@
     }
     .remove-space {
         float: right !important;
-        margin-left: 15rem !important;
+        margin-left: 10rem !important;
         color: white !important;
         font-size: 14px !important;
     }
-    .nav-cal{
+    .nav-cal, .nav-search{
         margin-left: 10px;
     }
+    
+
 }
 
 /* Phone */
@@ -60,4 +62,5 @@
     .nav-cal{
         font-size: 15px !important;
     }
+          
 }
