@@ -44,7 +44,7 @@ const Header = () => {
           </LinkContainer>
           <InputGroup className="nav-search">
             <Form.Control
-              placeholder="Recipient's username"
+              placeholder="Bạn cần gì ..."
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
             />
