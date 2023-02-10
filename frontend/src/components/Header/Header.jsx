@@ -60,7 +60,7 @@ const Header = () => {
               } `}
             >
               <i className="fas fa-shopping-cart"></i>
-              CART
+              Giỏ Hàng
             </Nav.Link>
           </LinkContainer>
           {userInfo ? (
