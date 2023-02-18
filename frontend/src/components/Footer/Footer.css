@@ -7,7 +7,8 @@
 
 .page-footer
 {
-  background-color: rgb(0, 0, 0);
+  padding-top: 10px !important;
+  background-color: #293f2b;
 }
 
 .dark-grey-text p
@@ -44,6 +45,10 @@
   text-transform:uppercase;
   margin-top:5px;
   letter-spacing:2px
+}
+.title-f{
+  color: white;
+  font-size: 1.2rem;
 }
 .site-footer a
 {
