@@ -12,7 +12,7 @@ const CardMenu = () => {
             <Card.Body>
               <Card.Title className="title">Nông Dân</Card.Title>
               {/* <Card.Img src="https://cdnmedia.baotintuc.vn/Upload/DMDnZyELa7xUDTdLsa19w/files/2020/08/070820/080820/140820/180620/220820/250820/ha-tinh-300820.jpg"></Card.Img> */}
-              <Card.Text className="card-text">
+              <Card.Text className="card-text card-p">
                 Nếu bạn là nông dân thì bạn đang ở một nền tảng hoàn hảo, từ đó
                 bạn có thể đặt hàng tất cả các sản phẩm liên quan đến nông
                 nghiệp của mình và bạn cũng có thể bán sản phẩm của mình.
@@ -28,7 +28,7 @@ const CardMenu = () => {
             <Card.Body>
               <Card.Title className="title">Nhà Cung Cấp</Card.Title>
               {/* <Card.Img src="https://api.nongthonviet.com.vn/media/2023/01/16/63c4efb7a99a944a937cbfcd_trai-cay-tet-16102023a_medium.jpg"></Card.Img> */}
-              <Card.Text className="card-text">
+              <Card.Text className="card-text card-p">
                 Bán nhiều loại sản phẩm liên quan đến nông nghiệp của bạn, thông
                 qua nền tảng của chúng tôi. Chúng tôi có hàng triệu nông dân kết
                 nối từ mọi miền đất nước.
@@ -43,7 +43,7 @@ const CardMenu = () => {
           <Card border="primary">
             <Card.Body>
               <Card.Title className="title">Khách Hàng</Card.Title>
-              <Card.Text className="card-text">
+              <Card.Text className="card-text card-p">
                 Không cần phải đi ra đường hay tới các siêu thị gần nhà, Chỉ cần
                 đặt hàng tại đây và nhận tất cả các loại sản phẩm được giao ngay
                 trước cửa nhà bạn. Tại sao phải chờ đợi? Đi và đặt hàng.
