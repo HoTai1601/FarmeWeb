@@ -25,12 +25,15 @@ const PurchaseSeeds = ({ _id, name, rating, image, reviews, price }) => {
           <Card.Text>
             <h4>Giá:{price} vnđ</h4>
           </Card.Text>
-          <LinkContainer to={`/farmers/purchaseSeeds/${_id}`}>
-            <Button className="btn-preview" varient="success">
-              Mua hàng
-            </Button>
-          </LinkContainer>
         </Card.Body>
+        <Card.Footer className="card-f">
+          <LinkContainer to={`/farmers/purchaseSeeds/${_id}`}>
+            <Button varient="success">Mua hàng</Button>
+          </LinkContainer>
+          <LinkContainer to={`/farmers/purchaseSeeds/${_id}`}>
+            <Button varient="success">Xem thêm</Button>
+          </LinkContainer>
+        </Card.Footer>
       </Card>
     </Col>
   );
