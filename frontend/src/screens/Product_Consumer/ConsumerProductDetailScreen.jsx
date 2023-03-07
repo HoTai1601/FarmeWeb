@@ -63,15 +63,13 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                   <h2>{consumerProduct.prod_name}</h2>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <h4>Seller: {consumerProduct.seller_name}</h4>
+                  <h6>Người bán: {consumerProduct.seller_name}</h6>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <h4>Price: {consumerProduct.price}</h4>
+                  <h6>Giá: {consumerProduct.price} VND</h6>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <p>
-                    Avalaible Location: {consumerProduct.avalaible_location}
-                  </p>
+                  <p>Số lượng tại kho: {consumerProduct.avalaible_location}</p>
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -80,26 +78,24 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
-                      <Col>Price:</Col>
+                      <Col>Giá:</Col>
                       <Col>
-                        <strong>RS. {consumerProduct.price}</strong>
+                        <strong>{consumerProduct.price} VND</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Status:</Col>
+                      <Col>Trạng thái:</Col>
                       <Col>
-                        {consumerProduct.quantity > 0
-                          ? "In Stock"
-                          : "Out Of Stock"}
+                        {consumerProduct.quantity > 0 ? "còn hàng" : "hết hàng"}
                       </Col>
                     </Row>
                   </ListGroup.Item>
                   {consumerProduct.quantity > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col>Số Lượng</Col>
                         <Col>
                           <Form.Control
                             as="select"
@@ -124,7 +120,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                       className="btn btn-block"
                       onClick={addtoCartHandler}
                     >
-                      Add To Cart
+                      Thêm vào giỏ hàng
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
