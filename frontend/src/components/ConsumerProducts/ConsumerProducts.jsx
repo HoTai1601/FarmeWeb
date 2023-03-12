@@ -21,20 +21,22 @@ const ConsumerProducts = ({
               {prod_name}
             </Card.Title>
           </LinkContainer>
-          <Card.Text as="h5">
+          <Card.Text className="card-text-c" as="h5">
             Giá: {price} VND <br />
-            Số lượng {prod_size}
+            Khối lượng: {prod_size}
           </Card.Text>
-          <Card.Text as="p">
+          <Card.Text className="card-text-c" as="p">
             Tại <span style={{ fontWeight: "bold" }}>{avalaible_location}</span>
           </Card.Text>
-          <br />
-          <LinkContainer to={`/consumer/${_id}`}>
-            <Button className="btn-preview" varient="success">
-              Xem chi tiết
-            </Button>
-          </LinkContainer>
         </Card.Body>
+        <Card.Footer className="card-f2">
+          <LinkContainer to={`/consumer/${_id}`}>
+            <Button varient="success">Mua hàng</Button>
+          </LinkContainer>
+          <LinkContainer to={`/consumer/${_id}`}>
+            <Button varient="success">Xem thêm</Button>
+          </LinkContainer>
+        </Card.Footer>
       </Card>
     </Col>
   );

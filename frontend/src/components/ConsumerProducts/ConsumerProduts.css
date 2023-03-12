@@ -5,3 +5,14 @@
     font-weight: bold;
     font-size: 22px;
 }
+.card-text-c{
+    text-align: center !important;
+    min-height: 0;
+}
+.card-f2 {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -27,11 +27,14 @@ const LendMachines = ({ _id, name, image, targetPlant, price }) => {
           <Card.Text>
             <h3>Giá: {price} VND</h3>
           </Card.Text>
-          <LinkContainer to={`/farmers/lendMachines/${_id}`}>
-            <Button className="btn-preview" varient="success">
-              Xem chi tiết
-            </Button>
-          </LinkContainer>
+          <Card.Footer className="card-f1">
+            <LinkContainer to={`/farmers/lendMachines/${_id}`}>
+              <Button varient="success">Mua hàng</Button>
+            </LinkContainer>
+            <LinkContainer to={`/farmers/lendMachines/${_id}`}>
+              <Button varient="success">Xem thêm</Button>
+            </LinkContainer>
+          </Card.Footer>
         </Card.Body>
       </Card>
     </Col>

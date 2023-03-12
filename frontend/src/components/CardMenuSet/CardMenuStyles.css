@@ -11,6 +11,7 @@
 
 .card-text {
   text-align: center;
+  min-height: 100px;
 }
 .card-p{
   min-height: 150px;
