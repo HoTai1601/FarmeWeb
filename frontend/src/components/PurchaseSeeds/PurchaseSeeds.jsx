@@ -19,10 +19,10 @@ const PurchaseSeeds = ({ _id, name, rating, image, reviews, price }) => {
               <strong>{name}</strong>
             </Card.Title>
           </LinkContainer>
-          <Card.Text>
+          <Card.Text className="f1">
             <Rating value={rating} text={`${reviews} reviews`} />
           </Card.Text>
-          <Card.Text>
+          <Card.Text className="f1">
             <h4>Giá:{price} vnđ</h4>
           </Card.Text>
         </Card.Body>

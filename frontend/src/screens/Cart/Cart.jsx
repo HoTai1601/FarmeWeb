@@ -45,7 +45,7 @@ const Cart = ({ match, location, history }) => {
       <Meta title="Agroic | Cart" />
       <Row>
         <Col md={8}>
-          <h1>Shopping Cart</h1>
+          <h1>Giỏ hàng</h1>
           {cartItems.length === 0 ? (
             <Message variant="danger">
               Bạn chưa có gì trong giỏ hàng!{" "}
@@ -64,7 +64,7 @@ const Cart = ({ match, location, history }) => {
                         {item.name}
                       </Link>
                     </Col>
-                    <Col md={2}>RS.{item.price}</Col>
+                    <Col md={3}>Giá: {item.price} VNĐ</Col>
                     <Col md={2}>
                       <Form.Control
                         as="select"
@@ -100,10 +100,10 @@ const Cart = ({ match, location, history }) => {
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <h2>
-                  Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}
-                  ) items
+                  Tổng sản phẩm (
+                  {cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 </h2>
-                RS.
+                Tổng giá:
                 {cartItems
                   .reduce((acc, item) => acc + item.qty * item.price, 0)
                   .toFixed(2)}
@@ -115,7 +115,7 @@ const Cart = ({ match, location, history }) => {
                   disabled={cartItems.length === 0}
                   onClick={checkoutHandler}
                 >
-                  Proceed To Checkout
+                  Đặt hàng
                 </Button>
               </ListGroup.Item>
             </ListGroup>

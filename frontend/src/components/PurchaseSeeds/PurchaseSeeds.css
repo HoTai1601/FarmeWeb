@@ -7,6 +7,9 @@
   height: 15vw;
   object-fit: cover;
 }
+.f1{
+  min-height: 0;
+}
 .card-f {
   display: flex;
   flex-wrap: nowrap;
