@@ -81,7 +81,7 @@ const LendMachineProduct = ({ history, match }) => {
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
-                      <Col>Machine Power:</Col>
+                      <Col>Mã lực:</Col>
                       <Col>
                         <strong>{productLendMachines.machine_power}</strong>
                       </Col>
@@ -89,14 +89,14 @@ const LendMachineProduct = ({ history, match }) => {
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Target Plant:</Col>
+                      <Col>Tại:</Col>
                       <Col>{productLendMachines.target_plant}</Col>
                     </Row>
                   </ListGroup.Item>
                   {productLendMachines.quantity > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col>số lượng</Col>
                         <Col>
                           <Form.Control
                             as="select"
@@ -121,7 +121,7 @@ const LendMachineProduct = ({ history, match }) => {
                       className="btn btn-block"
                       onClick={addtoCartHandler}
                     >
-                      Add To Cart
+                      Thêm vào giỏ hàng
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
