@@ -96,7 +96,7 @@ const LendMachineProduct = ({ history, match }) => {
                   {productLendMachines.quantity > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>số lượng</Col>
+                        <Col>Số lượng</Col>
                         <Col>
                           <Form.Control
                             as="select"
