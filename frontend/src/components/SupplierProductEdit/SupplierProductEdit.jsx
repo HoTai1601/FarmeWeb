@@ -117,7 +117,7 @@ const SupplierProductEdit = ({ match }) => {
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId='name'>
-                                <Form.Label>Name <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Tên <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="name"
                                     placeholder="Enter name"
@@ -127,7 +127,7 @@ const SupplierProductEdit = ({ match }) => {
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='email'>
-                                <Form.Label>Email Address / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Địa chỉ Email / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="nic"
                                     placeholder="Enter email or NIC"
@@ -137,7 +137,7 @@ const SupplierProductEdit = ({ match }) => {
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='address'>
-                                <Form.Label>Address <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Địa chỉ <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="address"
                                     as="textarea" rows={1}
@@ -158,7 +158,7 @@ const SupplierProductEdit = ({ match }) => {
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='storage'>
-                                <Form.Label>Product Size <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Khối lượng <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="storage"
                                     placeholder="Enter size (kg)"
@@ -170,7 +170,7 @@ const SupplierProductEdit = ({ match }) => {
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId='image'>
-                                <Form.Label>Image <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Hình ảnh <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter image url"
@@ -187,7 +187,7 @@ const SupplierProductEdit = ({ match }) => {
                                 {uploading && <Loader />}
                             </Form.Group>
                             <Form.Group controlId='phonenumber'>
-                                <Form.Label>Phone Number <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Số điện thoại <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="phonenumber"
                                     placeholder="Enter phonenumber"
@@ -197,7 +197,7 @@ const SupplierProductEdit = ({ match }) => {
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='description'>
-                                <Form.Label>Description <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Mô tả <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     as="textarea" rows={3}
                                     type="description"
