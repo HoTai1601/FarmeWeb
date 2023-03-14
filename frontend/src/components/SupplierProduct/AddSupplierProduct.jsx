@@ -107,7 +107,7 @@ const AddSupplierProduct = () => {
             </Form.Group>
             <Form.Group controlId="email">
               <Form.Label>
-                Gmail: <span style={{ color: "red" }}>*</span>
+                Địa chỉ Email: <span style={{ color: "red" }}>*</span>
               </Form.Label>
               <Form.Control
                 type="nic"
@@ -206,7 +206,7 @@ const AddSupplierProduct = () => {
             </Form.Group>
             <br />
             <Button style={{ float: "right" }} type="submit" variant="primary">
-              Đăng
+              Đăng ký
             </Button>
           </Col>
         </Row>
