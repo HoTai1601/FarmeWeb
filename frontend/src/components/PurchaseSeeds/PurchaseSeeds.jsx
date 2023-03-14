@@ -23,7 +23,7 @@ const PurchaseSeeds = ({ _id, name, rating, image, reviews, price }) => {
             <Rating value={rating} text={`${reviews} reviews`} />
           </Card.Text>
           <Card.Text className="f1">
-            <h4>Giá:{price} vnđ</h4>
+            <h4>Giá:{price} VND</h4>
           </Card.Text>
         </Card.Body>
         <Card.Footer className="card-f">
