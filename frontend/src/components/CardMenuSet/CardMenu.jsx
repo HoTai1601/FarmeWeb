@@ -35,7 +35,7 @@ const CardMenu = () => {
               </Card.Text>
               <Link to="login?redirect=supplier">
                 <Button variant="success" className="btn-explore btn-md m-2">
-                  chi tiết hơn
+                  Chi tiết hơn
                 </Button>
               </Link>
             </Card.Body>
@@ -50,7 +50,7 @@ const CardMenu = () => {
               </Card.Text>
               <Link to="/consumer">
                 <Button variant="success" className="btn-explore btn-md m-2">
-                  chi tiết hơn
+                  Chi tiết hơn
                 </Button>
               </Link>
             </Card.Body>
