@@ -106,7 +106,7 @@ const SupplierProductEdit = ({ match }) => {
             <FormContainer>
                 <h2 style={{ marginTop: '100px', textAlign: 'center' }}>Product Profile</h2>
                 <Link to='/profile' className='btn btn-light my-3'>
-                    GO BACK
+                    Trở về
                 </Link>
                 {loading && <Loader />}
                 {error && <Message variant='danger'>{error}</Message>}
