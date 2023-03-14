@@ -148,7 +148,7 @@ const SupplierProductEdit = ({ match }) => {
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='cropSelection'>
-                                <Form.Label>Crop Selection <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Loại hàng hóa <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="cropSelection"
                                     placeholder="Enter crop selection"
