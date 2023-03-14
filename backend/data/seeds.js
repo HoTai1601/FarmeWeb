@@ -1,8 +1,8 @@
 const Seeds = [
     {
-        name: 'Almond',
+        name: 'Hạnh nhân',
         image: '/images/seeds/almond.jpg',
-        description: 'The almond is a species of tree native to Iran and surrounding countries but widely cultivated elsewhere.',
+        description: 'Hạnh nhân là một loài cây có nguồn gốc từ Iran và các nước xung quanh nhưng được trồng rộng rãi ở những nơi khác.',
         category: 'sample category',
         price: 250,
         countInStock: 10,
@@ -10,9 +10,9 @@ const Seeds = [
         numReviews: 1
     },
     {
-        name: 'Basil',
+        name: 'Húng quế',
         image: '/images/seeds/basil.jpg',
-        description: 'Basil is native to tropical regions from central Africa to Southeast Asia. It is a tender plant, and is used in cuisines worldwide. ',
+        description: 'Húng quế có nguồn gốc từ các vùng nhiệt đới từ Trung Phi đến Đông Nam Á. Nó là một loại cây mềm và được sử dụng trong các món ăn trên toàn thế giới. ',
         category: 'sample category',
         price: 300,
         countInStock: 8,
@@ -20,9 +20,9 @@ const Seeds = [
         numReviews: 3
     },
     {
-        name: 'Black Sesame',
+        name: 'Mè đen',
         image: '/images/seeds/blackseasame.jpg',
-        description: 'Sesame is a flowering plant in the genus Sesamum, also called benne.Numerous wild relatives occur in Africa and a smaller number in India.',
+        description: 'Vừng là một loài thực vật có hoa trong chi Sesamum, còn được gọi là benne. Có nhiều họ hàng hoang dã ở Châu Phi và một số ít hơn ở Ấn Độ.',
         category: 'sample category',
         price: 650,
         countInStock: 15,
@@ -40,9 +40,9 @@ const Seeds = [
         numReviews: 1
     },
     {
-        name: 'Peanut',
+        name: 'Đậu phộng',
         image: '/images/seeds/peanut.png',
-        description: 'The peanut, also known as the groundnut,goober, pindar or monkey nut, and taxonomically classified as Arachis hypogaea, is a legume crop grown mainly for its edible seeds.',
+        description: 'Đậu phộng, còn được gọi là lạc, goober, pindar hoặc hạt khỉ, và được phân loại theo phân loại học là Arachis hypogaea, là một loại cây họ đậu được trồng chủ yếu để lấy hạt ăn được.',
         category: 'sample category',
         price: 550,
         countInStock: 10,
@@ -50,9 +50,9 @@ const Seeds = [
         numReviews: 5
     },
     {
-        name: 'Soyabean',
+        name: 'Hạt đậu nành',
         image: '/images/seeds/soyabean.jpg',
-        description: 'The soybean or soya bean is a species of legume native to East Asia, widely grown for its edible bean, which has numerous uses.',
+        description: 'Đậu nành hay đậu nành là một loài cây họ đậu có nguồn gốc từ Đông Á, được trồng rộng rãi để lấy hạt ăn được, có nhiều công dụng.',
         category: 'sample category',
         price: 250,
         countInStock: 25,
@@ -60,9 +60,9 @@ const Seeds = [
         numReviews: 6
     },
     {
-        name: 'Sunflower Seed',
+        name: 'Hạt hướng dương',
         image: '/images/seeds/sunflower.jpg',
-        description: 'The sunflower seed is the fruit of the sunflower. There are three types of commonly used sunflower seeds: linoleic ',
+        description: 'Hạt hướng dương là quả của cây hướng dương. Có ba loại hạt hướng dương thường được sử dụng: linoleic',
         category: 'sample category',
         price: 400,
         countInStock: 7,
@@ -70,9 +70,9 @@ const Seeds = [
         numReviews: 0
     },
     {
-        name: 'Tea Seed',
+        name: 'Trà',
         image: '/images/seeds/teasead.jpg',
-        description: 'Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured or fresh leaves of the Camellia sinensis, an evergreen shrub native to East Asia.',
+        description: 'Trà là một loại đồ uống có mùi thơm thường được pha chế bằng cách đổ nước nóng hoặc nước sôi lên lá tươi hoặc đã được xử lý của cây Camellia sinensis, một loại cây bụi thường xanh có nguồn gốc từ Đông Á.',
         category: 'sample category',
         price: 150,
         countInStock: 5,
@@ -80,9 +80,9 @@ const Seeds = [
         numReviews: 5
     },
     {
-        name: 'Walnut',
+        name: 'Quả óc chó',
         image: '/images/seeds/walnuts.jpg',
-        description: 'A walnut is the edible seed of a drupe, and thus not a true botanical nut',
+        description: 'Quả óc chó là hạt ăn được của quả hạch, và do đó không phải là hạt thực vật thực sự',
         category: 'sample category',
         price: 500,
         countInStock: 50,
@@ -90,9 +90,9 @@ const Seeds = [
         numReviews: 6
     },
     {
-        name: 'White Sesame',
+        name: 'Mè trắng',
         image: '/images/seeds/whoteseasame.jpg',
-        description: 'Sesame is a flowering plant in the genus Sesamum, also called benne.',
+        description: 'Vừng là một loài thực vật có hoa trong chi Sesamum, còn được gọi là benne.',
         category: 'sample category',
         price: 800,
         countInStock: 20,
