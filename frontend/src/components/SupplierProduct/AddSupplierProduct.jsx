@@ -99,7 +99,7 @@ const AddSupplierProduct = () => {
               </Form.Label>
               <Form.Control
                 type="name"
-                placeholder="Enter name"
+                placeholder="Nhập tên"
                 value={name}
                 required
                 onChange={(e) => setName(e.target.value)}
