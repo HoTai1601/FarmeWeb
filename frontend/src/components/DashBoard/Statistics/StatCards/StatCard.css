@@ -19,7 +19,9 @@
 }
 
 .card-text-name {
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
     float: right !important;
 }
 

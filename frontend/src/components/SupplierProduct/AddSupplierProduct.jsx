@@ -84,8 +84,8 @@ const AddSupplierProduct = () => {
     <Container>
       {success && (
         <Message variant="success">
-          Bạn có hàng hóa Nông sản hay máy móc cần bán thì hãy điền thông tin
-          vào đây.
+          Bạn đã thành công rao bán! Nếu bạn còn hàng hóa Nông sản hay máy móc
+          thì hãy điền thông tin vào đây.
         </Message>
       )}
       {error && <Message variant="danger">{error}</Message>}
