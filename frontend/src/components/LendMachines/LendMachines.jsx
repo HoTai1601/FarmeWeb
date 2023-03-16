@@ -19,9 +19,7 @@ const LendMachines = ({ _id, name, image, targetPlant, price }) => {
             </Card.Title>
           </LinkContainer>
           <Card.Text style={{ minHeight: "100px" }}>
-            <span style={{ fontWeight: "bold", minHeight: "100px" }}>
-              Sử dụng cho{" "}
-            </span>
+            <span style={{ fontWeight: "bold" }}>Sử dụng cho </span>
             <br /> {targetPlant}
           </Card.Text>
           <Card.Text>
