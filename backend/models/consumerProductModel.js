@@ -57,7 +57,11 @@ const consumerProductSchema = mongoose.Schema({
 }, {
     timestamps: true
 })
-
+consumerProductSchema.index({
+    prod_name: "text",
+  });
 const consumer_products = mongoose.model('consumer_products', consumerProductSchema);
-
+consumer_products.createIndexes({
+    prod_name: "text",
+  });
 export default consumer_products;

@@ -2,13 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar, NavDropdown, Image } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button";
-
 import "./Header.css";
 
 import { logout } from "./../../actions/userActions";
+import SearchForm from "./SearchForm";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -37,22 +34,13 @@ const Header = () => {
             <Nav.Link className="nav-cal">Nông Dân</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/consumer">
-            <Nav.Link className="nav-cal">Khách Hàng</Nav.Link>
+            <Nav.Link className="nav-cal">Sản Phẩm</Nav.Link>
           </LinkContainer>
           <LinkContainer to="login?redirect=supplier">
-            <Nav.Link className="nav-cal">Nhà Cung Cấp</Nav.Link>
+            <Nav.Link className="nav-cal">Đăng ký bán hàng</Nav.Link>
           </LinkContainer>
-          <InputGroup className="nav-search">
-            <Form.Control
-              placeholder="Bạn cần gì ..."
-              aria-label="Recipient's username"
-              aria-describedby="basic-addon2"
-            />
-            <Button className="nav-btn" variant="outline-secondary">
-              <i className="fas fa-search"></i>
-            </Button>
-          </InputGroup>
-
+          {/* search */}
+          <SearchForm />
           <LinkContainer to="/cart">
             <Nav.Link
               className={`${

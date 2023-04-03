@@ -79,12 +79,12 @@ const Footer = () => {
               </p>
               <p>
                 <Link to="/consumer" className="dark-grey-text">
-                  Khách Hàng{" "}
+                  Sản Phẩm{" "}
                 </Link>
               </p>
               <p>
                 <Link to="/supplier" className="dark-grey-text">
-                  Nhà Cung Ứng
+                  Đăng ký bán hàng
                 </Link>
               </p>
               <p>

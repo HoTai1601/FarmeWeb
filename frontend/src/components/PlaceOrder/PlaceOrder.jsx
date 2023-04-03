@@ -28,7 +28,7 @@ const PlaceOrder = ({ history }) => {
     .reduce((acc, item) => acc + item.qty * item.price, 0)
     .toFixed(2);
   cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 100;
-  cart.taxPrice = addDecimals(Number(0.15 * cart.itemsPrice).toFixed(2));
+  cart.taxPrice = addDecimals(Number(0.05 * cart.itemsPrice).toFixed(2));
   cart.totalPrice = (
     Number(cart.itemsPrice) +
     Number(cart.shippingPrice) +
@@ -42,11 +42,10 @@ const PlaceOrder = ({ history }) => {
     if (success) {
       history.push(`/order/${order._id}`);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [history, success]);
+  }, [history, success, orderCreate, order?._id]);
 
-  const placeOrder = () => {
-    dispatch(
+  const placeOrder = async () => {
+    await dispatch(
       createOrder({
         orderItems: cart.cartItems,
         shippingAddress: cart.shippingAddress,

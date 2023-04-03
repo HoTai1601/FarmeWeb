@@ -8,7 +8,7 @@ const SupplierScreen = () => {
   return (
     <Container className="supplierContainer">
       <Meta title="Agroic | Supplier" />
-      <h1 className="title">Nhà Cung Ứng</h1>
+      <h1 className="title">Đăng ký bán hàng</h1>
       <h4 className="supplier-title">
         Các bác Nông dân đừng lo lắng về nông sản tồn kho hay thương lái ép giá,
         hãy điền thông tin và gửi hình ảnh vào đây. Việc còn lại các bác cứ yên

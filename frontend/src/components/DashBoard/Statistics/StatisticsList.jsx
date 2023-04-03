@@ -34,4 +34,4 @@ const StatisticsList = () => {
     )
 }
 
-export default StatisticsList
+export default React.memo(StatisticsList)

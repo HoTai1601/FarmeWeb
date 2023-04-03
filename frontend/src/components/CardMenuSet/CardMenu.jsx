@@ -26,7 +26,7 @@ const CardMenu = () => {
           </Card>
           <Card border="primary">
             <Card.Body>
-              <Card.Title className="title">Nhà Cung Cấp</Card.Title>
+              <Card.Title className="title">Đăng ký bán hàng</Card.Title>
               {/* <Card.Img src="https://api.nongthonviet.com.vn/media/2023/01/16/63c4efb7a99a944a937cbfcd_trai-cay-tet-16102023a_medium.jpg"></Card.Img> */}
               <Card.Text className="card-text card-p">
                 Bán nhiều loại sản phẩm liên quan đến nông nghiệp của bạn, thông
@@ -42,7 +42,7 @@ const CardMenu = () => {
           </Card>
           <Card border="primary">
             <Card.Body>
-              <Card.Title className="title">Khách Hàng</Card.Title>
+              <Card.Title className="title">Sản phẩm</Card.Title>
               <Card.Text className="card-text card-p">
                 Không cần phải đi ra đường hay tới các siêu thị gần nhà, Chỉ cần
                 đặt hàng tại đây và nhận tất cả các loại sản phẩm được giao ngay

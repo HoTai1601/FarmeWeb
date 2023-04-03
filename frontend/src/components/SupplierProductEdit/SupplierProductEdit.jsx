@@ -232,7 +232,7 @@ const SupplierProductEdit = ({ match }) => {
               </Form.Group>
               <br />
               <Button type="submit" variant="primary">
-                Submit
+                Đăng
               </Button>
             </Col>
           </Row>

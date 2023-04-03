@@ -38,6 +38,26 @@ export const listConsumerProducts = () => async (dispatch) => {
         })
     }
 }
+export const listConsumerProductsSearch = (value) => async (dispatch) => {
+    try {
+        dispatch({ type: CONSUMER_PRODUCT_LIST_REQUEST })
+
+        const { data } = await axios.get(`/api/consumer/?search=${value}`)
+
+        dispatch({
+            type: CONSUMER_PRODUCT_LIST_SUCCESS,
+            payload: data
+        })
+    } catch (error) {
+        dispatch({
+            type: CONSUMER_PRODUCT_LIST_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message
+        })
+    }
+}
 
 export const listConsumerProductsDetails = (id) => async (dispatch) => {
     try {

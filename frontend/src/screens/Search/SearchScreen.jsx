@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Button, Alert } from "react-bootstrap";
 import ConsumerProducts from "./../../components/ConsumerProducts/ConsumerProducts";
-import { listConsumerProducts } from "./../../actions/consumerProductAction.js";
+import { listConsumerProductsSearch } from "./../../actions/consumerProductAction.js";
 import Message from "./../../components/Message/Message";
 import Loader from "./../../components/Loader/Loader";
 import "./ConsumerStyles.css";
 import Meta from "../../components/Helmet/Meta";
 
-const ConsumerScreen = () => {
+const SearchScreen = () => {
+     const {value} = useParams();
   const dispatch = useDispatch();
 
   const consumerProductList = useSelector((state) => state.consumerProductList);
@@ -17,7 +19,7 @@ const ConsumerScreen = () => {
   const [numberOfItems, setNumberOfItems] = useState(3);
 
   useEffect(() => {
-    dispatch(listConsumerProducts());
+    dispatch(listConsumerProductsSearch(value));
   }, [dispatch]);
 
   const showMore = () => {
@@ -32,12 +34,7 @@ const ConsumerScreen = () => {
     <div className="consumerProductScreen">
       <Meta title="Agroic | Consumer" />
       <Container className="consumerContainer">
-        <h1 className="title">Sản phẩm</h1>
-        <h4 className="consumer-title">
-          Không cần phải đến cánh đồng để lấy ngũ cốc!!! Chỉ cần đặt hàng tại
-          đây và nhận tất cả các loại garin được giao ngay trước cửa nhà bạn.
-          Tại sao phải chờ đợi? Đi và đặt hàng.
-        </h4>
+        <h1 className="title">Kết quả tìm kiếm</h1>
         <br />
         {loading ? (
           <Loader />
@@ -82,4 +79,4 @@ const ConsumerScreen = () => {
   );
 };
 
-export default ConsumerScreen;
+export default SearchScreen;

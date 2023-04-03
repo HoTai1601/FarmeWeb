@@ -10,28 +10,27 @@ const StatCards = () => {
   const dispatch = useDispatch();
   let history = useHistory();
 
+  
+  const userList = useSelector((state) => state.userList);
+  const { users } = userList;
+  const orderList = useSelector((state) => state.orderList);
+  const { orders } = orderList;
   const [userCount, setUserCount] = useState(0);
   const [orderCount, setOrderCount] = useState(0);
 
-  const userList = useSelector((state) => state.userList);
-  const { users } = userList;
-
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-
-  const orderList = useSelector((state) => state.orderList);
-  const { orders } = orderList;
-
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
       dispatch(listOrders());
 
-      const userLen = users.length;
-      const orderLen = orders.length;
-
-      setUserCount(userLen);
-      setOrderCount(orderLen);
+      if(users && orders){
+        const userLen = users.length;
+        const orderLen = orders.length;
+        setUserCount(userLen);
+        setOrderCount(orderLen);
+      }
     } else {
       history.push("/login");
     }
@@ -92,7 +91,7 @@ const StatCards = () => {
         </Card.Body>
       </Card>
 
-      <Card
+      {/* <Card
         className="card-set-deck"
         border="primary"
         style={{ width: "16rem" }}
@@ -116,7 +115,7 @@ const StatCards = () => {
             </Col>
           </Row>
         </Card.Body>
-      </Card>
+      </Card> */}
     </Row>
   );
 };

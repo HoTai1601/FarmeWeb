@@ -54,16 +54,16 @@ const LendMachineProduct = ({ history, match }) => {
                 className="mx-auto image-machine"
                 src={productLendMachines.image}
                 alt={productLendMachines.name}
-                width={200}
+                width={300}
               />
             </Col>
             <Col md={3}>
               <ListGroup className="borderless" variant="flush">
                 <ListGroup.Item>
-                  <h2>{productLendMachines.name}</h2>
+                  <h4>{productLendMachines.name}</h4>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <h4>Giá: {productLendMachines.price}</h4>
+                  <h6>Giá: {productLendMachines.price} vnđ</h6>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <p>
@@ -89,7 +89,7 @@ const LendMachineProduct = ({ history, match }) => {
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Tại:</Col>
+                      <Col>Dùng cho:</Col>
                       <Col>{productLendMachines.target_plant}</Col>
                     </Row>
                   </ListGroup.Item>

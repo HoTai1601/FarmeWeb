@@ -1,14 +1,32 @@
 import express from 'express'
 import asyncHandler from 'express-async-handler'
 
+import APIfeatures from '../libs/features.js';
 import ConsumerProducts from './../models/consumerProductModel.js';
-
 // @desc    Fetch all products
 // @rout    GET /consumer
 // @access  public
 const getConsumerProducts = asyncHandler(async (req, res) => {
-    const consumerProducts = await ConsumerProducts.find({})
-    res.json(consumerProducts);
+      // const consumerProducts = await ConsumerProducts.find({})
+    // res.json(consumerProducts);
+    //
+    try {
+        const features = new APIfeatures(ConsumerProducts.find(), req.query)
+          .paginating()
+          .sorting()
+          .searching()
+          .filtering();
+        const result = await Promise.allSettled([
+          features.query,
+          ConsumerProducts.countDocuments(),
+        ]);
+        const products = result[0].status === "fulfilled" ? result[0].value : [];
+        const count = result[1].status === "fulfilled" ? result[1].value : 0;
+        return res.status(200).json(products);
+      } 
+      catch (error) {
+        return res.status(500).json({ msg: error.message });
+      }
 })
 
 // @desc    Fetch Consumer Product by id

@@ -94,7 +94,7 @@ const EditProfile = ({ history }) => {
               ></Form.Control>
             </Form.Group>
             <Form.Group controlId="cropSelection">
-              <Form.Label>VAI TRÒ</Form.Label>
+              <Form.Label>vai trò</Form.Label>
               <Form.Control
                 type="cropSelection"
                 placeholder="....."

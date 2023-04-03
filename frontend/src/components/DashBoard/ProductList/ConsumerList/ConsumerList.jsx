@@ -77,7 +77,7 @@ const ConsumerList = () => {
     <Container>
       <Row>
         <Col>
-          <h1 style={{ marginBottom: "20px" }}>Khách hàng</h1>
+          <h1 style={{ marginBottom: "20px" }}>Sản phẩm</h1>
         </Col>
         <Col className="text-right">
           <Button className="my-3" onClick={createConsumerProductHandler}>

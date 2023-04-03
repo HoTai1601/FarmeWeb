@@ -102,59 +102,59 @@ const ConsumerListEdit = ({ match }) => {
     <Container style={{ marginBottom: "50px" }}>
       <Meta title="Agroic | Admin Consumer Edit" />
       <FormContainer>
-        <h2 style={{ marginTop: "120px", textAlign: "center" }}>
-          Consumer Profile
-        </h2>
+        <h2 style={{ marginTop: "120px", textAlign: "center" }}>Sản phẩm</h2>
         <Link to="/admin/productlist" className="btn btn-light my-3">
-          GO BACK
+          Trở lại
         </Link>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
         {loading && <Loader />}
         {error && <Message variant="danger">{error}</Message>}
-        {successUpdate && <Message variant="success">Profile Updated!</Message>}
+        {successUpdate && (
+          <Message variant="success">Cập nhật thông tin!</Message>
+        )}
         <Form onSubmit={submitHandler}>
           <Row>
             <Col md={6}>
               <Form.Group controlId="prodname">
-                <Form.Label>Name</Form.Label>
+                <Form.Label>Tên</Form.Label>
                 <Form.Control
                   type="prodName"
-                  placeholder="Enter Product Name"
+                  placeholder="Nhập tên sản phẩm"
                   value={prodName}
                   onChange={(e) => setProdName(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="image">
-                <Form.Label>Image</Form.Label>
+                <Form.Label>Hình ảnh</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter image url"
+                  placeholder=" Đường dẫn url"
                   value={image}
                   onChange={(e) => setImage(e.target.value)}
                 ></Form.Control>
                 <Form.File
                   id="image-file"
-                  label="Choose File"
+                  label="chọn ảnh từ máy"
                   custom
                   onChange={uploadFileHandler}
                 ></Form.File>
                 {uploading && <Loader />}
               </Form.Group>
               <Form.Group controlId="sellerName">
-                <Form.Label>Seller Name</Form.Label>
+                <Form.Label>Người bán</Form.Label>
                 <Form.Control
                   type="sellerName"
-                  placeholder="Enter seller name"
+                  placeholder="Tên người bán"
                   value={sellerName}
                   onChange={(e) => setSellerName(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="price">
-                <Form.Label>Price</Form.Label>
+                <Form.Label>Giá</Form.Label>
                 <Form.Control
                   type="price"
-                  placeholder="Enter price"
+                  placeholder="Giá"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                 ></Form.Control>
@@ -162,34 +162,34 @@ const ConsumerListEdit = ({ match }) => {
             </Col>
             <Col md={6}>
               <Form.Group controlId="prodSize">
-                <Form.Label>Product Size</Form.Label>
+                <Form.Label>khối lượng</Form.Label>
                 <Form.Control
                   type="prodSize"
-                  placeholder="Enter product size"
+                  placeholder="kg/cái"
                   value={prodSize}
                   onChange={(e) => setProdSize(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="quantity">
-                <Form.Label>Quantity</Form.Label>
+                <Form.Label>số lượng</Form.Label>
                 <Form.Control
                   type="countInStock"
-                  placeholder="Enter qunatity"
+                  placeholder=""
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="avalaibleLoc">
-                <Form.Label>Machine Power</Form.Label>
+                <Form.Label>Mã lực</Form.Label>
                 <Form.Control
                   type="avalaibleLoc"
-                  placeholder="Enter avalaible location"
+                  placeholder="0HP"
                   value={avalaibleLoc}
                   onChange={(e) => setAvalaibleLoc(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Button type="submit" variant="primary">
-                Update
+                cập nhật
               </Button>
             </Col>
           </Row>

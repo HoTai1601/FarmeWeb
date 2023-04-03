@@ -16,14 +16,16 @@ const PurchaseSeeds = ({ _id, name, rating, image, reviews, price }) => {
         <Card.Body>
           <LinkContainer to={`/farmers/purchaseSeeds/${_id}`}>
             <Card.Title className="title">
-              <strong>{name}</strong>
+              <strong>
+                {name.length >= 25 ? `${name.slice(0, 21)}...` : `${name}`}
+              </strong>
             </Card.Title>
           </LinkContainer>
           <Card.Text className="f1">
             <Rating value={rating} text={`${reviews} reviews`} />
           </Card.Text>
           <Card.Text className="f1">
-            <h4>Giá:{price} VND</h4>
+            <h5>Giá: {price} vnđ</h5>
           </Card.Text>
         </Card.Body>
         <Card.Footer className="card-f">

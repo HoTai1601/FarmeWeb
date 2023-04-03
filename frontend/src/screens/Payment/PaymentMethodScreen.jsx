@@ -14,7 +14,7 @@ const PaymentScreen = ({ history }) => {
     history.push("/shipping");
   }
 
-  const [paymentMethod, setPaymentMethod] = useState("PayPal");
+  const [paymentMethod, setPaymentMethod] = useState("Thanh toán tại nhà");
 
   const dispatch = useDispatch();
 
@@ -41,19 +41,18 @@ const PaymentScreen = ({ history }) => {
                 id="paypal"
                 name="paymentMethod"
                 value="PayPal"
-                checked
                 onChange={(e) => setPaymentMethod(e.target.value)}
               ></Form.Check>
               <Form.Check
                 type="radio"
-                label="Stripe"
-                id="Stripe"
+                label="Thanh toán tại nhà"
+                id="payAtHome"
                 name="paymentMethod"
-                value="Stripe"
+                value="Thanh toán tại nhà"
                 checked
                 onChange={(e) => setPaymentMethod(e.target.value)}
               ></Form.Check>
-            </Col>
+            </Col>  
           </Form.Group>
           <Button type="submit">Tiếp theo</Button>
         </Form>

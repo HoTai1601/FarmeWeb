@@ -10,7 +10,7 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "./../../components/Loader/Loader";
 import Message from "../../components/Message/Message";
@@ -27,15 +27,12 @@ import Meta from "../../components/Helmet/Meta";
 
 const OrderScreen = ({ match }) => {
   const orderId = match.params.id;
-
   const [sdkReady, setSdkReady] = useState(false);
-
   const dispatch = useDispatch();
   let history = useHistory();
 
   const orderDetails = useSelector((state) => state.orderDetails);
   const { order, loading, error } = orderDetails;
-
   const orderPay = useSelector((state) => state.orderPay);
   const { success: successPay, loading: loadingPay } = orderPay;
 
@@ -49,30 +46,32 @@ const OrderScreen = ({ match }) => {
     if (!userInfo) {
       history.push("/login");
     }
-
     // Add paypal script to body
     const addPayPalScript = async () => {
       const { data: clientId } = await axios.get("/api/config/paypal");
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`;
+      script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=USD`;
       script.async = true;
       script.onload = () => {
-        setSdkReady(true);
+          setSdkReady(true);
       };
       document.body.appendChild(script);
     };
+    
+    if ( !orderId || !order  || successPay || successDeliver) {
+      dispatch(getOrderDetails(orderId));
 
-    if (!order || successPay || successDeliver) {
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
-      dispatch(getOrderDetails(orderId));
-    } else if (!order.isPaid) {
-      if (!window.paypal) {
-        addPayPalScript();
-      } else {
-        setSdkReady(true);
-      }
+    } else if (!order.isPaid && userInfo._id === order.user._id && order.paymentMethod === "PayPal") {
+      setTimeout(()=>{
+        if (!window.paypal) {
+          addPayPalScript();
+        }else{
+          setSdkReady(true);
+        }
+      },1000)
     }
   }, [dispatch, orderId, successPay, order, successDeliver, history, userInfo]);
 
@@ -83,8 +82,6 @@ const OrderScreen = ({ match }) => {
   const deliverHandler = () => {
     dispatch(deliverOrder(order));
   };
-  // const itemsPrice = order.totalPrice - (order.taxPrice + order.shippingPrice)
-
   return (
     <div>
       <Meta title="Agroic | Order" />
@@ -119,7 +116,7 @@ const OrderScreen = ({ match }) => {
                   </p>
                   {order.isDelivered ? (
                     <Message variant="success">
-                      Thành công {order.deliveredAt}
+                      Đặt hàng thành công
                     </Message>
                   ) : (
                     <Message variant="danger">Thất bại</Message>
@@ -136,7 +133,7 @@ const OrderScreen = ({ match }) => {
                       Thanh toán thành công {order.paidAt}
                     </Message>
                   ) : (
-                    <Message variant="danger">Thanh toán thất bại</Message>
+                    <Message variant="danger">Trạng thái: Chưa thanh toán</Message>
                   )}
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -160,7 +157,7 @@ const OrderScreen = ({ match }) => {
                             <Col md={4}>
                               {`${item.qty} x ${item.price} = ${
                                 item.qty * item.price
-                              } VND`}
+                              } USD`}
                             </Col>
                           </Row>
                         </ListGroup.Item>
@@ -182,25 +179,25 @@ const OrderScreen = ({ match }) => {
                       <Col>{`${
                         order.totalPrice -
                         (order.taxPrice + order.shippingPrice).toFixed(2)
-                      } VND`}</Col>
+                      } USD`}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Tiền ship</Col>
-                      <Col>{`${order.shippingPrice} VND`}</Col>
+                      <Col>{`${order.shippingPrice} USD`}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Thuế</Col>
-                      <Col>{`${order.taxPrice} VND`}</Col>
+                      <Col>{`${order.taxPrice} USD`}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Tổng tiền</Col>
-                      <Col>{`${order.totalPrice} VND`}</Col>
+                      <Col>{`${order.totalPrice} USD`}</Col>
                     </Row>
                   </ListGroup.Item>
                   {!order.isPaid && (
@@ -228,7 +225,7 @@ const OrderScreen = ({ match }) => {
                           onClick={deliverHandler}
                         >
                           {" "}
-                          Thành công{" "}
+                           thành công{" "}
                         </Button>
                       </ListGroup.Item>
                     )}

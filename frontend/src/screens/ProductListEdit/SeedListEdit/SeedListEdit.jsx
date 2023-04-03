@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../../../components/Message/Message";
@@ -97,52 +97,55 @@ const SeedListEdit = ({ match }) => {
     <Container style={{ marginBottom: "50px" }}>
       <Meta title="Agroic | Admin Seed Edit" />
       <FormContainer>
-        <h2 style={{ marginTop: "120px", textAlign: "center" }}>
-          Seed Profile
-        </h2>
+        <h2 style={{ marginTop: "100px", textAlign: "center" }}>Hạt giống</h2>
         <Link to="/admin/productlist" className="btn btn-light my-3">
-          GO BACK
+          Trở lại
         </Link>
         {loading && <Loader />}
         {error && <Message variant="danger">{error}</Message>}
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
-        {successUpdate && <Message variant="success">Profile Updated!</Message>}
+        {successUpdate && (
+          <Message variant="success">Cập nhập thông tin!</Message>
+        )}
         <Form onSubmit={submitHandler}>
           <Row>
             <Col md={6}>
               <Form.Group controlId="name">
-                <Form.Label>Name</Form.Label>
+                <Form.Label>Tên</Form.Label>
                 <Form.Control
                   type="name"
-                  placeholder="Enter name"
+                  placeholder="Nhập tên"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="image">
-                <Form.Label>Image</Form.Label>
+                <Form.Label>Hình ảnh</Form.Label>
+                <Card>
+                  <Card.Img src={image} variant="top" />
+                </Card>
                 <Form.Control
                   type="text"
-                  placeholder="Enter image url"
+                  placeholder="Nhập đường dẫn url"
                   value={image}
                   onChange={(e) => setImage(e.target.value)}
                 ></Form.Control>
                 <Form.File
                   id="image-file"
-                  label="Choose File"
+                  label="chọn ảnh"
                   custom
                   onChange={uploadFileHandler}
                 ></Form.File>
                 {uploading && <Loader />}
               </Form.Group>
               <Form.Group controlId="description">
-                <Form.Label>Description</Form.Label>
+                <Form.Label>Mô tả</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}
                   type="description"
-                  placeholder="Enter description"
+                  placeholder="Viết mô tả"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 ></Form.Control>
@@ -150,34 +153,34 @@ const SeedListEdit = ({ match }) => {
             </Col>
             <Col md={6}>
               <Form.Group controlId="category">
-                <Form.Label>Category</Form.Label>
+                <Form.Label>Loại</Form.Label>
                 <Form.Control
                   type="category"
-                  placeholder="Enter price"
+                  placeholder="Hàng hóa loại gì..."
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="price">
-                <Form.Label>Price</Form.Label>
+                <Form.Label>Giá</Form.Label>
                 <Form.Control
                   type="price"
-                  placeholder="Enter price"
+                  placeholder="Giá"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="countInStock">
-                <Form.Label>Count in stock</Form.Label>
+                <Form.Label>Số lượng</Form.Label>
                 <Form.Control
                   type="countInStock"
-                  placeholder="Enter count in stock"
+                  placeholder="Nhập số lượng"
                   value={countInStock}
                   onChange={(e) => setCountInStock(e.target.value)}
                 ></Form.Control>
               </Form.Group>
               <Button type="submit" variant="primary">
-                Update
+                Cập nhật
               </Button>
             </Col>
           </Row>

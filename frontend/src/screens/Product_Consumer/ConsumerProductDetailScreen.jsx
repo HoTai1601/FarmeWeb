@@ -60,16 +60,18 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
             <Col md={3}>
               <ListGroup className="borderless" variant="flush">
                 <ListGroup.Item>
-                  <h2>{consumerProduct.prod_name}</h2>
+                  <h5>{consumerProduct.prod_name}</h5>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <h6>Người bán: {consumerProduct.seller_name}</h6>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <h6>Giá: {consumerProduct.price} VND</h6>
+                  <h6>Giá: {consumerProduct.price} vnđ</h6>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <p>Số lượng tại kho: {consumerProduct.avalaible_location}</p>
+                  <p>
+                    Sản phẩm có tại kho: {consumerProduct.avalaible_location}
+                  </p>
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -80,7 +82,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                     <Row>
                       <Col>Giá:</Col>
                       <Col>
-                        <strong>{consumerProduct.price} VND</strong>
+                        <strong>{consumerProduct.price} vnđ</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>

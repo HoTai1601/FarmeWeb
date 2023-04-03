@@ -8,11 +8,19 @@ import colors from 'colors'
 import { notFound, errorHandler } from './middleware/errorMiddlware.js'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
+import payPalRoutes from './routes/payPalRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
 import supplierRoutes from './routes/supplierRoutes.js'
-
+import paypal from 'paypal-rest-sdk';
 dotenv.config('./../.env');
+
+
+paypal.configure({
+    'mode': 'sandbox',
+    'client_id': process.env.PAYPAL_CLIENT_ID,
+    'client_secret': process.env.PAYPAL_SECRET,
+  });
 
 connectDB();
 
@@ -32,6 +40,7 @@ app.use('/api/supplier', supplierRoutes);
 
 // PAYPAL 
 app.get('/api/config/paypal', (req, res) => res.send(process.env.PAYPAL_CLIENT_ID))
+app.use('/api/paypal',payPalRoutes)
 
 const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
