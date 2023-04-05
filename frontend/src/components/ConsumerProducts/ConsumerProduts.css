@@ -5,6 +5,10 @@
     font-weight: bold;
     font-size: 22px;
 }
+.image-c{
+    max-height: 250px;
+    object-fit: cover;
+}
 .card-text-c{
     text-align: center !important;
     min-height: 0;

@@ -67,8 +67,8 @@ const FarmerProduct = ({ history, match }) => {
     <div className="productScreen">
       <Meta title="Agroic | Admin Farmer Review" />
       <Container>
-        <Link className="btn btn-go-back btn-dark" to="/admin/supplierproducts">
-          Quay lại
+        <Link className="btn btn-go-back " to="/admin/supplierproducts">
+          Trở lại
         </Link>
         {loading ? (
           <Loader />
@@ -76,7 +76,7 @@ const FarmerProduct = ({ history, match }) => {
           <Message variant="danger">{error}</Message>
         ) : (
           <Row className="p-1 seed-product">
-            <Col md={5}>
+            <Col md={6}>
               <Image
                 className="mx-auto image-machine"
                 src={product.image}
@@ -172,6 +172,7 @@ const FarmerProduct = ({ history, match }) => {
                           <Form.Control
                             as="textarea"
                             row="3"
+                            style={{ resize: "none" }}
                             value={comment}
                             onChange={(e) => setComment(e.target.value)}
                           ></Form.Control>

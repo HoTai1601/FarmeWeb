@@ -107,7 +107,7 @@ const PlaceOrder = ({ history }) => {
                           <Col md={4}>
                             {`${item.qty} x  ${item.price} =  ${
                               item.qty * item.price
-                            } VND.`}
+                            } vnd.`}
                           </Col>
                         </Row>
                       </ListGroup.Item>
@@ -126,25 +126,25 @@ const PlaceOrder = ({ history }) => {
                 <ListGroup.Item>
                   <Row>
                     <Col>Tổng tiền</Col>
-                    <Col>{`${cart.itemsPrice} VND`}</Col>
+                    <Col>{`${cart.itemsPrice} vnd`}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Tiền ship</Col>
-                    <Col>{`${cart.shippingPrice} VND`}</Col>
+                    <Col>{`${cart.shippingPrice} vnd`}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Thuế</Col>
-                    <Col>{`${cart.taxPrice} VND`}</Col>
+                    <Col>{`${cart.taxPrice} vnd`}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Thành tiền</Col>
-                    <Col>{`${cart.totalPrice} VND`}</Col>
+                    <Col>{`${cart.totalPrice} vnd`}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>

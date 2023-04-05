@@ -14,7 +14,7 @@ const HarvestScreen = () => {
             <h4>Nông sản</h4>
           </Col>
           <Col md={9}>
-            <h4 style={{ marginLeft: "30px" }}>Hàng hóa</h4>
+            <h4 style={{ marginLeft: "30px" }}>Sản phẩm đăng ký bán</h4>
           </Col>
         </Row>
         <Row>

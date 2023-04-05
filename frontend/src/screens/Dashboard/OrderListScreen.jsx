@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import OrderList from "../../components/DashBoard/OrderList/OrderList";
 import Meta from "../../components/Helmet/Meta";
 import SideBarComponents from "../../components/SideBar/SideBarComponents";
+import { Scrollbar } from "react-scrollbars-custom";
 
 const OrderListScreen = () => {
   return (
@@ -17,14 +18,16 @@ const OrderListScreen = () => {
             <h4 style={{ marginLeft: "30px" }}>Tổng đơn hàng</h4>
           </Col>
         </Row>
-        <Row>
-          <Col md={3}>
-            <SideBarComponents />
-          </Col>
-          <Col md={9}>
-            <OrderList />
-          </Col>
-        </Row>
+        <Scrollbar style={{ width: "100%", height: "80vh" }}>
+          <Row>
+            <Col md={3}>
+              <SideBarComponents />
+            </Col>
+            <Col md={9}>
+              <OrderList />
+            </Col>
+          </Row>
+        </Scrollbar>
       </Container>
     </div>
   );

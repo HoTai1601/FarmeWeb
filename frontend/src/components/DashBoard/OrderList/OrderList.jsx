@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../../../components/Message/Message";
 import Loader from "./../../../components/Loader/Loader";
-import { listOrders } from "./../../../actions/orderAction";
+import { listOrders, deleteOrders } from "./../../../actions/orderAction";
 
 const OrderListScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -15,14 +15,22 @@ const OrderListScreen = ({ history }) => {
   const orderList = useSelector((state) => state.orderList);
   const { loading, error, orders } = orderList;
 
+  const orderDelete = useSelector((state) => state.orderDelete);
+  const { success: successDelete } = orderDelete;
+
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listOrders());
     } else {
       history.push("/login");
     }
-  }, [dispatch, history, userInfo]);
+  }, [dispatch, history, successDelete, userInfo]);
 
+  const deleteHandler = (id) => {
+    if (window.confirm("Bạn có chắc không")) {
+      dispatch(deleteOrders(id));
+    }
+  };
   return (
     <div style={{ marginTop: "10px" }}>
       <Container>
@@ -59,21 +67,21 @@ const OrderListScreen = ({ history }) => {
                   <td>{order.totalPrice}</td>
                   <td>
                     {order.isPaid ? (
-                              <i
-                                className="fa fa-check"
-                                styles={{ color: "green" }}
-                              ></i>
-                            ) : (
+                      <i
+                        className="fa fa-check"
+                        styles={{ color: "green" }}
+                      ></i>
+                    ) : (
                       <i className="fas fa-times" style={{ color: "red" }}></i>
                     )}
                   </td>
                   <td>
                     {order.isDelivered ? (
-                              <i
-                                className="fa fa-check"
-                                styles={{ color: "green" }}
-                              ></i>
-                            ) : (
+                      <i
+                        className="fa fa-check"
+                        styles={{ color: "green" }}
+                      ></i>
+                    ) : (
                       <i className="fas fa-times" style={{ color: "red" }}></i>
                     )}
                   </td>
@@ -83,6 +91,13 @@ const OrderListScreen = ({ history }) => {
                         Chi tiết
                       </Button>
                     </LinkContainer>
+                    <Button
+                      variant="danger"
+                      className="btn-sm mr-2"
+                      onClick={() => deleteHandler(order._id)}
+                    >
+                      <i className="fas fa-trash-alt"></i>
+                    </Button>
                   </td>
                 </tr>
               ))}

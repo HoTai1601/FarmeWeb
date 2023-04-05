@@ -140,10 +140,10 @@ const ProfileScreen = ({ history }) => {
               ></Form.Control>
             </Form.Group>
             <Form.Group controlId="password">
-              <Form.Label>Mật khẩu</Form.Label>
+              <Form.Label>Mật khẩu mới</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Nhập mật khẩu"
+                placeholder="Nhập mật khẩu mới"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               ></Form.Control>
@@ -190,7 +190,7 @@ const ProfileScreen = ({ history }) => {
                           <td>{order.createdAt.substring(0, 10)}</td>
                           <td>{order.totalPrice}</td>
                           <td>
-                            {order.isPaid ?  (
+                            {order.isPaid ? (
                               <i
                                 className="fa fa-check"
                                 styles={{ color: "green" }}
@@ -229,7 +229,7 @@ const ProfileScreen = ({ history }) => {
                 )}
               </Row>
               <Row>
-                <h2 style={{ marginTop: "110px" }}>Hàng hóa</h2>
+                <h2 style={{ marginTop: "110px" }}>Sản phảm đăng ký bán</h2>
                 {loadingProducts ? (
                   <Loader />
                 ) : errorProducts ? (

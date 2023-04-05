@@ -128,9 +128,10 @@ const Footer = () => {
                   <Form.Label>Nhận xét</Form.Label>
                   <Form.Control
                     as="textarea"
-                    rows={3}
+                    rows={6}
                     type="text"
                     placeholder="Bạn có ý kiến gì"
+                    style={{ resize: "none" }}
                   />
                 </Form.Group>
                 <Button variant="primary" type="submit">

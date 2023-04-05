@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../../../components/Message/Message";
@@ -103,7 +103,7 @@ const ConsumerListEdit = ({ match }) => {
       <Meta title="Agroic | Admin Consumer Edit" />
       <FormContainer>
         <h2 style={{ marginTop: "120px", textAlign: "center" }}>Sản phẩm</h2>
-        <Link to="/admin/productlist" className="btn btn-light my-3">
+        <Link to="/admin/productlist" className="btn btn-warning my-3">
           Trở lại
         </Link>
         {loadingUpdate && <Loader />}
@@ -127,6 +127,9 @@ const ConsumerListEdit = ({ match }) => {
               </Form.Group>
               <Form.Group controlId="image">
                 <Form.Label>Hình ảnh</Form.Label>
+                <Card>
+                  <Card.Img src={image} variant="top" />
+                </Card>
                 <Form.Control
                   type="text"
                   placeholder=" Đường dẫn url"
@@ -171,7 +174,7 @@ const ConsumerListEdit = ({ match }) => {
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="quantity">
-                <Form.Label>số lượng</Form.Label>
+                <Form.Label>Số lượng</Form.Label>
                 <Form.Control
                   type="countInStock"
                   placeholder=""
@@ -180,7 +183,7 @@ const ConsumerListEdit = ({ match }) => {
                 ></Form.Control>
               </Form.Group>
               <Form.Group controlId="avalaibleLoc">
-                <Form.Label>Mã lực</Form.Label>
+                <Form.Label>Sản phẩm tại kho</Form.Label>
                 <Form.Control
                   type="avalaibleLoc"
                   placeholder="0HP"

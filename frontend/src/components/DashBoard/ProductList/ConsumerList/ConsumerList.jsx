@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button, Row, Col, Container } from "react-bootstrap";
+import { Table, Button, Row, Col, Container, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../../../../components/Message/Message";
@@ -64,7 +64,7 @@ const ConsumerList = () => {
   ]);
 
   const deleteHandler = (id) => {
-    if (window.confirm("Are you sure")) {
+    if (window.confirm("Bạn có chắc không!")) {
       dispatch(deleteConsumerProduct(id));
     }
   };
@@ -111,6 +111,8 @@ const ConsumerList = () => {
               <td>ID</td>
               <td>NGƯỜI BÁN</td>
               <td>TÊN SẢN PHẨM</td>
+              <td>ẢNH</td>
+              <td>GIÁ</td>
               <td>TẠI</td>
               <td>CHỈNH SỬA</td>
             </tr>
@@ -121,6 +123,10 @@ const ConsumerList = () => {
                 <td>{consumer._id}</td>
                 <td>{consumer.seller_name}</td>
                 <td>{consumer.prod_name}</td>
+                <td>
+                  <Image src={consumer.image} rounded width="60px" />
+                </td>
+                <td>{consumer.price}</td>
                 <td>{consumer.avalaible_location}</td>
                 <td>
                   <LinkContainer

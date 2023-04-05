@@ -108,7 +108,7 @@ const SupplierProductEdit = ({ match }) => {
         <h2 style={{ marginTop: "100px", textAlign: "center" }}>
           Chi tiết sản phẩm
         </h2>
-        <Link to="/profile" className="btn btn-light my-3">
+        <Link to="/profile" className="btn btn-warning my-3">
           Trở về
         </Link>
         {loading && <Loader />}
@@ -153,6 +153,7 @@ const SupplierProductEdit = ({ match }) => {
                   type="address"
                   as="textarea"
                   rows={1}
+                  style={{ resize: "none" }}
                   placeholder="Nhập địa chỉ"
                   value={address}
                   required
@@ -210,7 +211,7 @@ const SupplierProductEdit = ({ match }) => {
                 </Form.Label>
                 <Form.Control
                   type="phonenumber"
-                  placeholder="Enter phonenumber"
+                  placeholder="Nhập số điện thoại"
                   value={phonenumber}
                   required
                   onChange={(e) => setPhonenumber(e.target.value)}
@@ -224,7 +225,8 @@ const SupplierProductEdit = ({ match }) => {
                   as="textarea"
                   rows={3}
                   type="description"
-                  placeholder="Enter description"
+                  style={{ resize: "none" }}
+                  placeholder="Nhập mô tả"
                   value={description}
                   required
                   onChange={(e) => setDescription(e.target.value)}

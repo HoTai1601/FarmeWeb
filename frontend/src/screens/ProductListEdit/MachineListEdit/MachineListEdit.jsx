@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../../../components/Message/Message";
@@ -103,7 +103,7 @@ const SeedListEdit = ({ match }) => {
       <Meta title="Agroic | Admin Machine Edit" />
       <FormContainer>
         <h2 style={{ marginTop: "120px", textAlign: "center" }}>Máy móc</h2>
-        <Link to="/admin/productlist" className="btn btn-light my-3">
+        <Link to="/admin/productlist" className="btn btn-warning my-3">
           Trở lại
         </Link>
         {loading && <Loader />}
@@ -127,6 +127,9 @@ const SeedListEdit = ({ match }) => {
               </Form.Group>
               <Form.Group controlId="image">
                 <Form.Label>Hình ảnh</Form.Label>
+                <Card>
+                  <Card.Img src={image} variant="top" />
+                </Card>
                 <Form.Control
                   type="text"
                   placeholder="Đường dẫn url"
@@ -150,19 +153,20 @@ const SeedListEdit = ({ match }) => {
                   onChange={(e) => setPrice(e.target.value)}
                 ></Form.Control>
               </Form.Group>
+            </Col>
+            <Col md={6}>
               <Form.Group controlId="description">
                 <Form.Label>Mô tả</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}
                   type="description"
+                  style={{ resize: "none" }}
                   placeholder="Mô tả"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-            </Col>
-            <Col md={6}>
               <Form.Group controlId="countInStock">
                 <Form.Label>Dùng cho</Form.Label>
                 <Form.Control

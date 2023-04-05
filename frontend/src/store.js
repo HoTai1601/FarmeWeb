@@ -1,132 +1,134 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 import {
-    prodcutSeedListReducer,
-    prodcutSeedDetailsReducer,
-    prodcutSeedDeleteReducer,
-    seedCreateReducer,
-    seedUpdateReducer,
-    productReviewCreateReducer
-} from './reducers/productSeedReducer'
+  prodcutSeedListReducer,
+  prodcutSeedDetailsReducer,
+  prodcutSeedDeleteReducer,
+  seedCreateReducer,
+  seedUpdateReducer,
+  productReviewCreateReducer,
+} from "./reducers/productSeedReducer";
 import {
-    productLendMachinesListReducer,
-    productLendMachinesDetailsReducer,
-    productLendMachinesDeleteReducer,
-    LendMachinesCreateReducer,
-    LendMachinesUpdateReducer
-} from './reducers/productLendMachineReducer'
-import { cartSeedReducer } from './reducers/cartReducers'
+  productLendMachinesListReducer,
+  productLendMachinesDetailsReducer,
+  productLendMachinesDeleteReducer,
+  LendMachinesCreateReducer,
+  LendMachinesUpdateReducer,
+} from "./reducers/productLendMachineReducer";
+import { cartSeedReducer } from "./reducers/cartReducers";
 import {
-    userLoginReducer,
-    userRegisterReducer,
-    userDetailsReducer,
-    userUpdateProfileReducer,
-    userListeReducer,
-    userDeleteReducer,
-    userUpdateReducer
-} from './reducers/userReducer.js'
+  userLoginReducer,
+  userRegisterReducer,
+  userDetailsReducer,
+  userUpdateProfileReducer,
+  userListeReducer,
+  userDeleteReducer,
+  userUpdateReducer,
+} from "./reducers/userReducer.js";
 import {
-    consumerProductListReducer,
-    consumerProductDetailsReducer,
-    consumerProductDeleteReducer,
-    consumerCreateReducer,
-    consumerUpdateReducer
-} from './reducers/consumerProductsReducer'
+  consumerProductListReducer,
+  consumerProductDetailsReducer,
+  consumerProductDeleteReducer,
+  consumerCreateReducer,
+  consumerUpdateReducer,
+} from "./reducers/consumerProductsReducer";
 import {
-    orderCreateReducer,
-    orderDetailsReducer,
-    orderPayReducer,
-    orderListMyReducer,
-    orderListReducer,
-    orderDeliverReducer
-} from './reducers/orderReducers'
+  orderCreateReducer,
+  orderDetailsReducer,
+  orderPayReducer,
+  orderListMyReducer,
+  orderListReducer,
+  orderDeliverReducer,
+  orderDeleteReducer,
+} from "./reducers/orderReducers";
 
 import {
-    productCreateReducer,
-    supplierProdictListMyReducer,
-    supplierProductListReducer,
-    FarmerProductDetailsReducer,
-    farmerReviewCreateReducer,
-    farmerProductUpdateReducer,
-    supplierProductForAllListReducer
-} from './reducers/supplierReducers'
+  productCreateReducer,
+  supplierProdictListMyReducer,
+  supplierProductListReducer,
+  FarmerProductDetailsReducer,
+  farmerReviewCreateReducer,
+  farmerProductUpdateReducer,
+  supplierProductForAllListReducer,
+} from "./reducers/supplierReducers";
 
 const reducer = combineReducers({
-    prodcutSeedList: prodcutSeedListReducer,
-    prodcutSeedDetails: prodcutSeedDetailsReducer,
-    prodcutSeedDelete: prodcutSeedDeleteReducer,
-    seedCreate: seedCreateReducer,
-    seedUpdate: seedUpdateReducer,
-    productReviewCreate: productReviewCreateReducer,
+  prodcutSeedList: prodcutSeedListReducer,
+  prodcutSeedDetails: prodcutSeedDetailsReducer,
+  prodcutSeedDelete: prodcutSeedDeleteReducer,
+  seedCreate: seedCreateReducer,
+  seedUpdate: seedUpdateReducer,
+  productReviewCreate: productReviewCreateReducer,
 
-    productLendMachinesList: productLendMachinesListReducer,
-    productLendMachinesDetails: productLendMachinesDetailsReducer,
-    productLendMachinesDelete: productLendMachinesDeleteReducer,
-    LendMachinesCreate: LendMachinesCreateReducer,
-    LendMachinesUpdate: LendMachinesUpdateReducer,
+  productLendMachinesList: productLendMachinesListReducer,
+  productLendMachinesDetails: productLendMachinesDetailsReducer,
+  productLendMachinesDelete: productLendMachinesDeleteReducer,
+  LendMachinesCreate: LendMachinesCreateReducer,
+  LendMachinesUpdate: LendMachinesUpdateReducer,
 
-    consumerProductList: consumerProductListReducer,
-    consumerProductDetails: consumerProductDetailsReducer,
-    consumerProductDelete: consumerProductDeleteReducer,
-    consumerCreate: consumerCreateReducer,
-    consumerUpdate: consumerUpdateReducer,
-    orderDeliver: orderDeliverReducer,
+  consumerProductList: consumerProductListReducer,
+  consumerProductDetails: consumerProductDetailsReducer,
+  consumerProductDelete: consumerProductDeleteReducer,
+  consumerCreate: consumerCreateReducer,
+  consumerUpdate: consumerUpdateReducer,
+  orderDeliver: orderDeliverReducer,
 
-    productCreate: productCreateReducer,
-    supplierProdictListMy: supplierProdictListMyReducer,
-    supplierProductList: supplierProductListReducer,
-    FarmerProductDetails: FarmerProductDetailsReducer,
-    farmerReviewCreate: farmerReviewCreateReducer,
-    farmerProductUpdate: farmerProductUpdateReducer,
-    supplierProductForAllList: supplierProductForAllListReducer,
+  productCreate: productCreateReducer,
+  supplierProdictListMy: supplierProdictListMyReducer,
+  supplierProductList: supplierProductListReducer,
+  FarmerProductDetails: FarmerProductDetailsReducer,
+  farmerReviewCreate: farmerReviewCreateReducer,
+  farmerProductUpdate: farmerProductUpdateReducer,
+  supplierProductForAllList: supplierProductForAllListReducer,
 
-    cartSeed: cartSeedReducer,
+  cartSeed: cartSeedReducer,
 
-    orderCreate: orderCreateReducer,
-    orderDetails: orderDetailsReducer,
-    orderPay: orderPayReducer,
-    orderListMy: orderListMyReducer,
-    orderList: orderListReducer,
+  orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderListMy: orderListMyReducer,
+  orderList: orderListReducer,
+  orderDelete: orderDeleteReducer,
 
-    userLogin: userLoginReducer,
-    userRegister: userRegisterReducer,
-    userDetails: userDetailsReducer,
-    userUpdateProfile: userUpdateProfileReducer,
-    userList: userListeReducer,
-    userDelete: userDeleteReducer,
-    userUpdate: userUpdateReducer
-})
+  userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
+  userList: userListeReducer,
+  userDelete: userDeleteReducer,
+  userUpdate: userUpdateReducer,
+});
 
-const cartItemsFromStorage = localStorage.getItem('cartItems')
-    ? JSON.parse(localStorage.getItem('cartItems'))
-    : []
+const cartItemsFromStorage = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
 
-const userInfoFromStorage = localStorage.getItem('userInfo')
-    ? JSON.parse(localStorage.getItem('userInfo'))
-    : null
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
 
-const shippingAddressFromStorage = localStorage.getItem('shippingAddress')
-    ? JSON.parse(localStorage.getItem('shippingAddress'))
-    : {}
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress")
+  ? JSON.parse(localStorage.getItem("shippingAddress"))
+  : {};
 
 const initialState = {
-    cartSeed: {
-        cartItems: cartItemsFromStorage,
-        shippingAddress: shippingAddressFromStorage
-    },
-    userLogin: {
-        userInfo: userInfoFromStorage
-    }
-}
+  cartSeed: {
+    cartItems: cartItemsFromStorage,
+    shippingAddress: shippingAddressFromStorage,
+  },
+  userLogin: {
+    userInfo: userInfoFromStorage,
+  },
+};
 
-const middleware = [thunk]
+const middleware = [thunk];
 
 const store = createStore(
-    reducer,
-    initialState,
-    composeWithDevTools(applyMiddleware(...middleware))
-)
+  reducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(...middleware))
+);
 
-export default store
+export default store;

@@ -14,7 +14,7 @@ const ConsumerProducts = ({
   return (
     <Col sm={12} md={6} lg={4}>
       <Card className="my-3 p-3 ">
-        <Card.Img className="image mx-auto" src={image} variant="top" />
+        <Card.Img className="image-c image mx-auto" src={image} variant="top" />
         <Card.Body>
           <LinkContainer to={`/consumer/${_id}`}>
             <Card.Title className="prod-title" as="div">
@@ -22,7 +22,7 @@ const ConsumerProducts = ({
             </Card.Title>
           </LinkContainer>
           <Card.Text className="card-text-c" as="h5">
-            Giá: {price} VND <br />
+            Giá: {price} vnd <br />
             Khối lượng: {prod_size}
           </Card.Text>
           <Card.Text className="card-text-c" as="p">

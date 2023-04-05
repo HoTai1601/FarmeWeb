@@ -36,7 +36,7 @@ const Header = () => {
           <LinkContainer to="/consumer">
             <Nav.Link className="nav-cal">Sản Phẩm</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="login?redirect=supplier">
+          <LinkContainer to="/supplier">
             <Nav.Link className="nav-cal">Đăng ký bán hàng</Nav.Link>
           </LinkContainer>
           {/* search */}

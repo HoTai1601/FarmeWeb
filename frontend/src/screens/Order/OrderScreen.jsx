@@ -10,7 +10,7 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
-import { useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "./../../components/Loader/Loader";
 import Message from "../../components/Message/Message";
@@ -54,24 +54,28 @@ const OrderScreen = ({ match }) => {
       script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=USD`;
       script.async = true;
       script.onload = () => {
-          setSdkReady(true);
+        setSdkReady(true);
       };
       document.body.appendChild(script);
     };
-    
-    if ( !orderId || !order  || successPay || successDeliver) {
+
+    if (!orderId || !order || successPay || successDeliver) {
       dispatch(getOrderDetails(orderId));
 
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
-    } else if (!order.isPaid && userInfo._id === order.user._id && order.paymentMethod === "PayPal") {
-      setTimeout(()=>{
+    } else if (
+      !order.isPaid &&
+      userInfo._id === order.user._id &&
+      order.paymentMethod === "PayPal"
+    ) {
+      setTimeout(() => {
         if (!window.paypal) {
           addPayPalScript();
-        }else{
+        } else {
           setSdkReady(true);
         }
-      },1000)
+      }, 1000);
     }
   }, [dispatch, orderId, successPay, order, successDeliver, history, userInfo]);
 
@@ -115,9 +119,7 @@ const OrderScreen = ({ match }) => {
                     {order.shippingAddress.country}
                   </p>
                   {order.isDelivered ? (
-                    <Message variant="success">
-                      Đặt hàng thành công
-                    </Message>
+                    <Message variant="success">Đặt hàng thành công</Message>
                   ) : (
                     <Message variant="danger">Thất bại</Message>
                   )}
@@ -133,7 +135,9 @@ const OrderScreen = ({ match }) => {
                       Thanh toán thành công {order.paidAt}
                     </Message>
                   ) : (
-                    <Message variant="danger">Trạng thái: Chưa thanh toán</Message>
+                    <Message variant="danger">
+                      Trạng thái: Chưa thanh toán
+                    </Message>
                   )}
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -157,7 +161,7 @@ const OrderScreen = ({ match }) => {
                             <Col md={4}>
                               {`${item.qty} x ${item.price} = ${
                                 item.qty * item.price
-                              } USD`}
+                              } vnd`}
                             </Col>
                           </Row>
                         </ListGroup.Item>
@@ -179,25 +183,25 @@ const OrderScreen = ({ match }) => {
                       <Col>{`${
                         order.totalPrice -
                         (order.taxPrice + order.shippingPrice).toFixed(2)
-                      } USD`}</Col>
+                      } vnd`}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Tiền ship</Col>
-                      <Col>{`${order.shippingPrice} USD`}</Col>
+                      <Col>{`${order.shippingPrice} vnd`}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Thuế</Col>
-                      <Col>{`${order.taxPrice} USD`}</Col>
+                      <Col>{`${order.taxPrice} vnd`}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Tổng tiền</Col>
-                      <Col>{`${order.totalPrice} USD`}</Col>
+                      <Col>{`${order.totalPrice} vnd`}</Col>
                     </Row>
                   </ListGroup.Item>
                   {!order.isPaid && (
@@ -225,7 +229,7 @@ const OrderScreen = ({ match }) => {
                           onClick={deliverHandler}
                         >
                           {" "}
-                           thành công{" "}
+                          thành công{" "}
                         </Button>
                       </ListGroup.Item>
                     )}

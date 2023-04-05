@@ -27,7 +27,7 @@ const UserList = ({ history }) => {
   }, [dispatch, history, successDelete, userInfo]);
 
   const deleteHandler = (id) => {
-    if (window.confirm("Are you sure")) {
+    if (window.confirm("Bạn có chắc không")) {
       dispatch(deleteUsers(id));
     }
   };
@@ -55,7 +55,7 @@ const UserList = ({ history }) => {
               <tr>
                 <td>ID</td>
                 <td>TÊN</td>
-                <td>VAI TRÒ</td>
+                <td>KHU VỰC</td>
                 <td>GMAIL</td>
                 <td>ADMIN</td>
                 <td>CHỈNH SỬA</td>
@@ -69,7 +69,7 @@ const UserList = ({ history }) => {
                   {user.cropSelection ? (
                     <td>{user.cropSelection}</td>
                   ) : (
-                    <td style={{ color: "red" }}>MẶC ĐỊNH</td>
+                    <td style={{ color: "red" }}>không</td>
                   )}
                   <td>
                     <a href={`mailto:${user.email}`}>{user.email}</a>

@@ -98,7 +98,7 @@ const SeedListEdit = ({ match }) => {
       <Meta title="Agroic | Admin Seed Edit" />
       <FormContainer>
         <h2 style={{ marginTop: "100px", textAlign: "center" }}>Hạt giống</h2>
-        <Link to="/admin/productlist" className="btn btn-light my-3">
+        <Link to="/admin/productlist" className="btn btn-warning my-3">
           Trở lại
         </Link>
         {loading && <Loader />}
@@ -139,19 +139,20 @@ const SeedListEdit = ({ match }) => {
                 ></Form.File>
                 {uploading && <Loader />}
               </Form.Group>
+            </Col>
+            <Col md={6}>
               <Form.Group controlId="description">
                 <Form.Label>Mô tả</Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows={3}
+                  rows={4}
                   type="description"
                   placeholder="Viết mô tả"
+                  style={{ resize: "none" }}
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-            </Col>
-            <Col md={6}>
               <Form.Group controlId="category">
                 <Form.Label>Loại</Form.Label>
                 <Form.Control

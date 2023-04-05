@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button, Container, Col, Row } from "react-bootstrap";
+import { Table, Button, Container, Col, Row, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../../../../components/Message/Message";
@@ -108,7 +108,9 @@ const SeedList = () => {
             <tr>
               <td>ID</td>
               <td>TÊN</td>
+              <td>ẢNH</td>
               <td>SỬ DỤNG CHO</td>
+              <td>GIÁ</td>
               <td>MÃ LỰC</td>
               <td>CHỈNH SỬA</td>
             </tr>
@@ -118,7 +120,11 @@ const SeedList = () => {
               <tr key={machine._id}>
                 <td>{machine._id}</td>
                 <td>{machine.name}</td>
+                <td>
+                  <Image src={machine.image} rounded width="60px" />
+                </td>
                 <td>{machine.target_plant}</td>
+                <td>{machine.price}</td>
                 <td>{machine.machine_power}</td>
                 <td>
                   <LinkContainer

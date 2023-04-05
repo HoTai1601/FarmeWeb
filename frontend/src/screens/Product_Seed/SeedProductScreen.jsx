@@ -102,7 +102,7 @@ const SeedProductScreen = ({ history, match }) => {
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <h4>Giá: {productSeed.price}</h4>
+                  <h4>Giá: {productSeed.price} vnd</h4>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <p>
@@ -119,7 +119,7 @@ const SeedProductScreen = ({ history, match }) => {
                     <Row>
                       <Col>Giá:</Col>
                       <Col>
-                        <strong>VND. {productSeed.price}</strong>
+                        <p>{productSeed.price} vnd</p>
                       </Col>
                     </Row>
                   </ListGroup.Item>
@@ -170,7 +170,7 @@ const SeedProductScreen = ({ history, match }) => {
         <Row>
           <Col md={6}>
             <h2>Reviews</h2>
-            {productSeed.reviews.length === 0 && <Message>No Reviews</Message>}
+            {productSeed?.reviews.length === 0 && <Message>No Reviews</Message>}
             <ListGroup variant="flush">
               {productSeed.reviews.map((review) => (
                 <ListGroup.Item key={review._id}>
@@ -215,6 +215,7 @@ const SeedProductScreen = ({ history, match }) => {
                       <Form.Control
                         as="textarea"
                         row="3"
+                        style={{ resize: "none" }}
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
                       ></Form.Control>
