@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "./../Message/Message";
@@ -109,7 +109,7 @@ const SupplierProductEdit = ({ match }) => {
           Chi tiết sản phẩm
         </h2>
         <Link to="/profile" className="btn btn-warning my-3">
-          Trở về
+          Trở lại
         </Link>
         {loading && <Loader />}
         {error && <Message variant="danger">{error}</Message>}
@@ -123,7 +123,7 @@ const SupplierProductEdit = ({ match }) => {
             <Col md={6}>
               <Form.Group controlId="name">
                 <Form.Label>
-                  Tên <span style={{ color: "red" }}>*</span>
+                  Tên sản phẩm <span style={{ color: "red" }}>*</span>
                 </Form.Label>
                 <Form.Control
                   type="name"
@@ -174,11 +174,11 @@ const SupplierProductEdit = ({ match }) => {
               </Form.Group>
               <Form.Group controlId="storage">
                 <Form.Label>
-                  Khối lượng <span style={{ color: "red" }}>*</span>
+                  Sản phẩm có tại <span style={{ color: "red" }}>*</span>
                 </Form.Label>
                 <Form.Control
                   type="storage"
-                  placeholder="kg/chiếc"
+                  placeholder="Tại"
                   value={storage}
                   required
                   onChange={(e) => setStorage(e.target.value)}
@@ -190,6 +190,9 @@ const SupplierProductEdit = ({ match }) => {
                 <Form.Label>
                   Hình ảnh <span style={{ color: "red" }}>*</span>
                 </Form.Label>
+                <Card>
+                  <Card.Img src={image} variant="top" />
+                </Card>
                 <Form.Control
                   type="text"
                   placeholder="URL"

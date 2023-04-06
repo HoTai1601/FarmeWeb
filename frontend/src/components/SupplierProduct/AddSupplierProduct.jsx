@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import { Form, Button, Row, Col, Container, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import Message from "./../../components/Message/Message";
@@ -95,7 +95,7 @@ const AddSupplierProduct = () => {
           <Col md={5}>
             <Form.Group controlId="name">
               <Form.Label>
-                Tên bạn: <span style={{ color: "red" }}>*</span>
+                Tên sản phẩm: <span style={{ color: "red" }}>*</span>
               </Form.Label>
               <Form.Control
                 type="name"
@@ -146,11 +146,11 @@ const AddSupplierProduct = () => {
             </Form.Group>
             <Form.Group controlId="storage">
               <Form.Label>
-                Số lượng <span style={{ color: "red" }}>*</span>
+                Sản phẩm có tại <span style={{ color: "red" }}>*</span>
               </Form.Label>
               <Form.Control
                 type="storage"
-                placeholder="Kg/chiếc"
+                placeholder="Tại...."
                 value={storage}
                 required
                 onChange={(e) => setStorage(e.target.value)}
@@ -162,6 +162,9 @@ const AddSupplierProduct = () => {
               <Form.Label>
                 Hình ảnh <span style={{ color: "red" }}>*</span>
               </Form.Label>
+              <Card>
+                <Card.Img src={image} variant="top" />
+              </Card>
               <Form.Control
                 type="text"
                 placeholder="ảnh"
@@ -179,7 +182,7 @@ const AddSupplierProduct = () => {
             </Form.Group>
             <Form.Group controlId="phonenumber">
               <Form.Label>
-                Số ĐT <span style={{ color: "red" }}>*</span>
+                Số điện thoại <span style={{ color: "red" }}>*</span>
               </Form.Label>
               <Form.Control
                 type="phonenumber"

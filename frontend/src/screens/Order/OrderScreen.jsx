@@ -119,9 +119,13 @@ const OrderScreen = ({ match }) => {
                     {order.shippingAddress.country}
                   </p>
                   {order.isDelivered ? (
-                    <Message variant="success">Đặt hàng thành công</Message>
+                    <Message variant="success">
+                      Xác nhận địa chỉ giao hàng thành công
+                    </Message>
                   ) : (
-                    <Message variant="danger">Thất bại</Message>
+                    <Message variant="danger">
+                      Xác nhận địa chỉ giao hàng thất bại
+                    </Message>
                   )}
                 </ListGroup.Item>
                 <ListGroup.Item>

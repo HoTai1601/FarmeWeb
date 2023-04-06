@@ -40,7 +40,7 @@ const LendMachineProduct = ({ history, match }) => {
     <div className="productScreen">
       <Meta title="Agroic | Machine" />
       <Container>
-        <Link className="btn btn-go-back btn-dark" to="/farmers/lendMachines">
+        <Link className="btn btn-warning" to="/farmers/lendMachines">
           Trở lại
         </Link>
         {loading ? (

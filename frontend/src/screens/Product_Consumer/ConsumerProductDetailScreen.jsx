@@ -40,7 +40,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
     <div className="productScreen">
       <Meta title="Agroic | Consumer Product" />
       <Container>
-        <Link className="btn btn-go-back btn-dark" to="/consumer">
+        <Link className="btn btn-warning" to="/consumer">
           Trở lại
         </Link>
         {loading ? (

@@ -98,7 +98,7 @@ const Harvest = () => {
                         to={`/supplierproducts/${product._id}/review`}
                       >
                         <Button variant="primary" className="btn-sm mr-2">
-                          <i className="fas fa-eye"></i> Nhận xét
+                          <i className="fas fa-eye"></i> Phản hồi
                         </Button>
                       </LinkContainer>
                     )}

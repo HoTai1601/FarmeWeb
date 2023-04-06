@@ -243,7 +243,7 @@ const ProfileScreen = ({ history }) => {
                         <th>ĐỊA CHỈ</th>
                         <th>ẢNH</th>
                         <th>LOẠI</th>
-                        <th>NHẬN XÉT</th>
+                        <th>XÉT DUYỆT</th>
                         <th>CHỈNH SỬA</th>
                       </tr>
                     </thead>

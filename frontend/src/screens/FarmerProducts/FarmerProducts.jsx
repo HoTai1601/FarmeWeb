@@ -67,7 +67,7 @@ const FarmerProduct = ({ history, match }) => {
     <div className="productScreen">
       <Meta title="Agroic | Admin Farmer Review" />
       <Container>
-        <Link className="btn btn-go-back " to="/admin/supplierproducts">
+        <Link className="btn btn-warning " to="/admin/supplierproducts">
           Trở lại
         </Link>
         {loading ? (
@@ -76,12 +76,12 @@ const FarmerProduct = ({ history, match }) => {
           <Message variant="danger">{error}</Message>
         ) : (
           <Row className="p-1 seed-product">
-            <Col md={6}>
+            <Col md={3}>
               <Image
                 className="mx-auto image-machine"
                 src={product.image}
                 alt={product.name}
-                width={200}
+                width={150}
               />
             </Col>
             <Col md={4}>
@@ -121,7 +121,7 @@ const FarmerProduct = ({ history, match }) => {
                 <ListGroup.Item>
                   <Row>
                     <Col md={6}>
-                      <h4>Crop </h4>
+                      <h4>Loại </h4>
                       {product.cropSelection}
                     </Col>
                     {product.storage ? (

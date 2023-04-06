@@ -55,7 +55,7 @@ const UserEditScreen = ({ match, history }) => {
       <Meta title="Agroic | Admin User Edit" />
       <FormContainer>
         <h1 style={{ marginTop: "120px" }}>Chỉnh sửa Users</h1>
-        <Link to="/admin/userList" className="btn btn-light my-2">
+        <Link to="/admin/userList" className="btn btn-warning my-3">
           Trở lại
         </Link>
         {loadingUpdate && <Loader />}
