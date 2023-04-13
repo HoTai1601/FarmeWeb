@@ -15,7 +15,9 @@ const LendMachines = ({ _id, name, image, targetPlant, price }) => {
         <Card.Body>
           <LinkContainer to={`/farmers/lendMachines/${_id}`}>
             <Card.Title className="title">
-              <strong>{name}</strong>
+              <strong>
+                {name.length >= 25 ? `${name.slice(0, 21)}...` : `${name}`}
+              </strong>
             </Card.Title>
           </LinkContainer>
           <Card.Text style={{ minHeight: "100px" }}>
