@@ -30,7 +30,7 @@ const ConsumerScreen = () => {
 
   return (
     <div className="consumerProductScreen">
-      <Meta title="Agroic | Consumer" />
+      <Meta title="Sugoi Ne | Sản Phẩm" />
       <Container className="consumerContainer">
         <h1 className="title">Sản phẩm</h1>
         <h4 className="consumer-title">

@@ -95,7 +95,7 @@ const ProfileScreen = ({ history }) => {
 
   return (
     <Container fluid style={{ marginBottom: "50px" }}>
-      <Meta title="Agroic | Profile" />
+      <Meta title="Sugoi Ne | Profile" />
       <Row>
         <Col md={3}>
           <h3 style={{ marginTop: "110px" }}>Thông tin người dùng</h3>

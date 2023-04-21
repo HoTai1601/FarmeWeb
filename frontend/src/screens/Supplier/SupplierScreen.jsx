@@ -7,7 +7,7 @@ import "./supplierStyles.css";
 const SupplierScreen = () => {
   return (
     <Container className="supplierContainer">
-      <Meta title="Agroic | Supplier" />
+      <Meta title="Sugoi Ne | Đăng Ký Bán" />
       <h1 className="title">Đăng ký bán hàng</h1>
       <h4 className="supplier-title">
         Các bác Nông dân đừng lo lắng về nông sản tồn kho hay thương lái ép giá,

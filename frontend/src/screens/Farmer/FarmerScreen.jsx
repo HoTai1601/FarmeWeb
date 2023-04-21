@@ -7,7 +7,7 @@ import "./FarmerStyle.css";
 const FarmerScreen = () => {
   return (
     <div>
-      <Meta title="Agroic | Farmers" />
+      <Meta title="Sugoi Ne | Nông Dân" />
       <Container className="farmerContainer">
         <h1 className="title">Nông Dân</h1>
         <h4 className="farmer-title">

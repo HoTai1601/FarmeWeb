@@ -88,7 +88,7 @@ const OrderScreen = ({ match }) => {
   };
   return (
     <div>
-      <Meta title="Agroic | Order" />
+      <Meta title="Sugoi Ne | Đơn Hàng" />
       {loading ? (
         <Loader />
       ) : error ? (

@@ -7,7 +7,7 @@ import SideBarComponents from "../../components/SideBar/SideBarComponents";
 const ProductListScreen = () => {
   return (
     <div style={{ marginTop: "110px" }}>
-      <Meta title="Agroic | Admin Products" />
+      <Meta title="Sugoi Ne | Admin Sản Phẩm" />
       <Container fluid>
         <Row>
           <Col md={3}>

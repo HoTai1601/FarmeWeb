@@ -35,7 +35,7 @@ const Farmer_LendScreen = () => {
 
   return (
     <div className="MachineLendScreen">
-      <Meta title="Agroic | Farmer Machines" />
+      <Meta title="Sugoi Ne | Máy Móc" />
       <Container>
         <h1 className="p-3" style={{ textAlign: "center" }}>
           Máy móc các loại

@@ -8,7 +8,7 @@ import { Scrollbar } from "react-scrollbars-custom";
 const OrderListScreen = () => {
   return (
     <div style={{ marginTop: "110px" }}>
-      <Meta title="Agroic | Admin Orders" />
+      <Meta title="Sugoi Ne | Admin Đơn Hàng" />
       <Container fluid>
         <Row>
           <Col md={3}>

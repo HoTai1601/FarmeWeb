@@ -71,7 +71,7 @@ const SeedProductScreen = ({ history, match }) => {
 
   return (
     <div className="productScreen">
-      <Meta title="Agroic | Seed" />
+      <Meta title="Sugoi Ne | Hạt Giống" />
       <Container>
         <Link className="btn btn-warning" to="/farmers/purchaseSeeds">
           Trở lại

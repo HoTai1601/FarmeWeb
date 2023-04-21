@@ -61,7 +61,7 @@ const PlaceOrder = ({ history }) => {
   return (
     <div style={{ marginTop: "100px", minHeight: "90vh" }}>
       <Container>
-        <Meta title="Agroic | Order" />
+        <Meta title="Sugoi Ne | Đơn Hàng" />
         <Row className="justify-content-md-center">
           <Col xs={12} md={6}>
             <CheckoutSteps step1 step2 step3 step4 />

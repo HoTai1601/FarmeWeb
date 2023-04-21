@@ -52,7 +52,7 @@ const UserEditScreen = ({ match, history }) => {
 
   return (
     <>
-      <Meta title="Agroic | Admin User Edit" />
+      <Meta title="Sugoi Ne | Admin User Edit" />
       <FormContainer>
         <h1 style={{ marginTop: "120px" }}>Chỉnh sửa Users</h1>
         <Link to="/admin/userList" className="btn btn-warning my-3">

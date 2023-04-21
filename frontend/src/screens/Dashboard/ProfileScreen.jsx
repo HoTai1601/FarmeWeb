@@ -7,7 +7,7 @@ import SideBarComponents from "../../components/SideBar/SideBarComponents";
 const ProfileScreen = () => {
   return (
     <div style={{ marginTop: "110px" }}>
-      <Meta title="Agroic | Admin Profile" />
+      <Meta title="Sugoi Ne | Admin Cá Nhân" />
       <Container fluid>
         <Row>
           <Col md={3}>

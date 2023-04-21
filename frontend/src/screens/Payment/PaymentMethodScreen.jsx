@@ -27,7 +27,7 @@ const PaymentScreen = ({ history }) => {
   return (
     <div style={{ marginTop: "100px" }}>
       <FormContainer>
-        <Meta title="Agroic | Payment" />
+        <Meta title="Sugoi Ne | Payment" />
         <CheckoutSteps step1 step2 step3 />
         <h3>Chọn phương thức thanh toán</h3>
         <Form onSubmit={submitHandler} style={{ marginBottom: "40px" }}>
@@ -52,7 +52,7 @@ const PaymentScreen = ({ history }) => {
                 checked
                 onChange={(e) => setPaymentMethod(e.target.value)}
               ></Form.Check>
-            </Col>  
+            </Col>
           </Form.Group>
           <Button type="submit">Tiếp theo</Button>
         </Form>

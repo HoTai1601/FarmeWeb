@@ -65,7 +65,7 @@ const FarmerProduct = ({ history, match }) => {
 
   return (
     <div className="productScreen">
-      <Meta title="Agroic | Admin Farmer Review" />
+      <Meta title="Sugoi Ne | Admin Đánh Giá" />
       <Container>
         <Link className="btn btn-warning " to="/admin/supplierproducts">
           Trở lại

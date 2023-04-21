@@ -42,7 +42,7 @@ const Cart = ({ match, location, history }) => {
     <Container
       style={{ marginTop: "100px", marginBottom: "50px", minHeight: "75vh" }}
     >
-      <Meta title="Agroic | Cart" />
+      <Meta title="Sugoi Ne | Giỏ Hàng" />
       <Row>
         <Col md={8}>
           <h1>Giỏ hàng</h1>

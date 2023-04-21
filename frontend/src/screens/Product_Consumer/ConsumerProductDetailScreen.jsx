@@ -38,7 +38,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
 
   return (
     <div className="productScreen">
-      <Meta title="Agroic | Consumer Product" />
+      <Meta title="Sugoi Ne | Sản Phẩm" />
       <Container>
         <Link className="btn btn-warning" to="/consumer">
           Trở lại

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Button, Alert } from "react-bootstrap";
 import ConsumerProducts from "./../../components/ConsumerProducts/ConsumerProducts";
@@ -10,7 +10,7 @@ import "./ConsumerStyles.css";
 import Meta from "../../components/Helmet/Meta";
 
 const SearchScreen = () => {
-     const {value} = useParams();
+  const { value } = useParams();
   const dispatch = useDispatch();
 
   const consumerProductList = useSelector((state) => state.consumerProductList);
@@ -32,7 +32,7 @@ const SearchScreen = () => {
 
   return (
     <div className="consumerProductScreen">
-      <Meta title="Agroic | Consumer" />
+      <Meta title="Sugoi Ne | Sản Phẩm" />
       <Container className="consumerContainer">
         <h1 className="title">Kết quả tìm kiếm</h1>
         <br />

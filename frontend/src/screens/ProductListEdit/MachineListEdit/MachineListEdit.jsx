@@ -100,7 +100,7 @@ const SeedListEdit = ({ match }) => {
 
   return (
     <Container style={{ marginBottom: "50px" }}>
-      <Meta title="Agroic | Admin Machine Edit" />
+      <Meta title="Sugoi Ne | Admin Edit Máy Móc" />
       <FormContainer>
         <h2 style={{ marginTop: "120px", textAlign: "center" }}>Máy móc</h2>
         <Link to="/admin/productlist" className="btn btn-warning my-3">

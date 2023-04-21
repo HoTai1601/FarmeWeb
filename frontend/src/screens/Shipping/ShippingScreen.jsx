@@ -26,7 +26,7 @@ const ShippingScreen = ({ history }) => {
   return (
     <div style={{ marginTop: "100px" }}>
       <FormContainer>
-        <Meta title="Agroic | Shipping" />
+        <Meta title="Sugoi Ne | Shipping" />
         <CheckoutSteps step1 step2 />
         <h3>Địa chỉ giao hàng</h3>
         <Form onSubmit={submitHandler} style={{ marginBottom: "40px" }}>

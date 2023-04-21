@@ -112,6 +112,7 @@ const AddSupplierProduct = () => {
               <Form.Control
                 type="nic"
                 placeholder="Nhập địa chỉ Gmail"
+                pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                 value={email}
                 required
                 onChange={(e) => setEmail(e.target.value)}

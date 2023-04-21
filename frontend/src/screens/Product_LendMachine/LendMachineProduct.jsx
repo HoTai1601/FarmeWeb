@@ -38,7 +38,7 @@ const LendMachineProduct = ({ history, match }) => {
   };
   return (
     <div className="productScreen">
-      <Meta title="Agroic | Machine" />
+      <Meta title="Sugoi Ne | Máy Móc" />
       <Container>
         <Link className="btn btn-warning" to="/farmers/lendMachines">
           Trở lại

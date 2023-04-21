@@ -100,7 +100,7 @@ const ConsumerListEdit = ({ match }) => {
 
   return (
     <Container style={{ marginBottom: "50px" }}>
-      <Meta title="Agroic | Admin Consumer Edit" />
+      <Meta title="Sugoi Ne | Admin  edit Sản Phẩm" />
       <FormContainer>
         <h2 style={{ marginTop: "120px", textAlign: "center" }}>Sản phẩm</h2>
         <Link to="/admin/productlist" className="btn btn-warning my-3">

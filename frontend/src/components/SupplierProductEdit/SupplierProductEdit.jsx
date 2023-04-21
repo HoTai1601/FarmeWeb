@@ -103,7 +103,7 @@ const SupplierProductEdit = ({ match }) => {
 
   return (
     <Container style={{ marginBottom: "50px" }}>
-      <Meta title="Agroic | Supplier Edit" />
+      <Meta title="Sugoi Ne | Chỉnh sửa" />
       <FormContainer>
         <h2 style={{ marginTop: "100px", textAlign: "center" }}>
           Chi tiết sản phẩm

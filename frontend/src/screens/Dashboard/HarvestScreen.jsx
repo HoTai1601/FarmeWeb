@@ -7,7 +7,7 @@ import SideBarComponents from "../../components/SideBar/SideBarComponents";
 const HarvestScreen = () => {
   return (
     <div style={{ marginTop: "110px" }}>
-      <Meta title="Agroic | Admin Harvest" />
+      <Meta title="Sugoi Ne | Admin Nông Sản" />
       <Container fluid>
         <Row>
           <Col md={3}>

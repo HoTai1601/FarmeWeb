@@ -7,7 +7,7 @@ import Meta from "../../components/Helmet/Meta";
 const DashboardScreen = () => {
   return (
     <div style={{ marginTop: "110px" }}>
-      <Meta title="Agroic | Admin Dashboard" />
+      <Meta title="Sugoi Ne | Admin Dashboard" />
       <Container fluid>
         <Row>
           <Col md={3}>

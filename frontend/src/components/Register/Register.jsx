@@ -31,7 +31,7 @@ const Register = ({ location, history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setMessage("Passwords do not match");
+      setMessage("Mật khẩu không khớp!");
     } else {
       dispatch(register(name, email, password, cropSelection));
     }
@@ -39,7 +39,7 @@ const Register = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <Meta title="Agroic | Register" />
+      <Meta title="Sugoi Ne | Đăng Ký" />
       <h1 style={{ marginTop: "120px" }}>Đăng nhập</h1>
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
@@ -66,6 +66,7 @@ const Register = ({ location, history }) => {
               <Form.Control
                 type="nic"
                 placeholder="Nhập Gmail"
+                pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                 value={email}
                 required
                 onChange={(e) => setEmail(e.target.value)}
