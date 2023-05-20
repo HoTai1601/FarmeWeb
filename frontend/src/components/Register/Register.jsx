@@ -40,7 +40,7 @@ const Register = ({ location, history }) => {
   return (
     <FormContainer>
       <Meta title="Sugoi Ne | Đăng Ký" />
-      <h1 style={{ marginTop: "120px" }}>Đăng nhập</h1>
+      <h1 style={{ marginTop: "120px" }}>Đăng ký</h1>
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
@@ -66,7 +66,7 @@ const Register = ({ location, history }) => {
               <Form.Control
                 type="nic"
                 placeholder="Nhập Gmail"
-                pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                // pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                 value={email}
                 required
                 onChange={(e) => setEmail(e.target.value)}

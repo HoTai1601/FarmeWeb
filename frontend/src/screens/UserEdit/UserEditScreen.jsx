@@ -92,7 +92,7 @@ const UserEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
             <Form.Group controlId="cropSelection">
-              <Form.Label>Vai trò</Form.Label>
+              <Form.Label>Khu vực</Form.Label>
               <Form.Control
                 type="cropSelection"
                 placeholder="...."

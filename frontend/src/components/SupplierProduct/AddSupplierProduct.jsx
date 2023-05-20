@@ -112,7 +112,7 @@ const AddSupplierProduct = () => {
               <Form.Control
                 type="nic"
                 placeholder="Nhập địa chỉ Gmail"
-                pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                // pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                 value={email}
                 required
                 onChange={(e) => setEmail(e.target.value)}
@@ -147,11 +147,11 @@ const AddSupplierProduct = () => {
             </Form.Group>
             <Form.Group controlId="storage">
               <Form.Label>
-                Sản phẩm có tại <span style={{ color: "red" }}>*</span>
+                Khối lượng/Số lượng<span style={{ color: "red" }}>*</span>
               </Form.Label>
               <Form.Control
                 type="storage"
-                placeholder="Tại...."
+                placeholder="Kg/Cái"
                 value={storage}
                 required
                 onChange={(e) => setStorage(e.target.value)}

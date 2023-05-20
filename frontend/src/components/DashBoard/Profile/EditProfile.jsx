@@ -46,7 +46,7 @@ const EditProfile = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setMessage("Passwords do not match");
+      setMessage("sai mật khẩu");
     } else {
       dispatch(
         updateUserProfile({
@@ -94,7 +94,7 @@ const EditProfile = ({ history }) => {
               ></Form.Control>
             </Form.Group>
             <Form.Group controlId="cropSelection">
-              <Form.Label>vai trò</Form.Label>
+              <Form.Label>Khu vực</Form.Label>
               <Form.Control
                 type="cropSelection"
                 placeholder="....."

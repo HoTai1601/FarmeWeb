@@ -3,6 +3,7 @@
     background-color: #03540c !important;
     width: auto;
     color: white !important;
+    padding: 0.1rem 1rem;
 }
 .nav-cal{
     width: auto;
@@ -90,4 +91,11 @@
         font-size: 15px !important;
     }
           
+}
+.icon-menu{
+    background-color: rgb(49, 164, 49);
+    
+}
+.icon-menu:hover{
+    background-color: rgb(33, 230, 6);
 }

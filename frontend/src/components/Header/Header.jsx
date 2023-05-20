@@ -24,7 +24,7 @@ const Header = () => {
           <Image width="100px" src="/Logo1.png" />
         </Navbar.Brand>
       </LinkContainer>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="icon-menu" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto ">
           <LinkContainer to="/">
